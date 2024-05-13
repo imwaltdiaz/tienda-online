@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Dashboard from './components/pages/admin_paginaPrincipal';
+import Dashboard from './components/admin/admin_paginaPrincipal';
 
 function App() {
   return (

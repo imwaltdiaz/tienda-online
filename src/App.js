@@ -1,13 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './components/common/header';
-import Footer from './components/common/footer';
+import Dashboard from './components/pages/admin_paginaPrincipal';
 
 function App() {
   return (
     <>
-      <Header/>
-      <Footer/>
+      <Dashboard/>
     </>
   );
 }

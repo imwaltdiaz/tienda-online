@@ -1,1 +1,2 @@
-//Archivo creado por: Pablo Jaramillo
+import header from '../header';
+import footer from '../footer';

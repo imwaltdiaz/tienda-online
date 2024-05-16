@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Dashboard from './components/admin/admin_paginaPrincipal';
+import AdminMain from './components/admin/AdminMain';
 
 function App() {
   return (
     <>
-      <Dashboard/>
+      <AdminMain/>
     </>
   );
 }

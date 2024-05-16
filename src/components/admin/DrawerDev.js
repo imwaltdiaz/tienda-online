@@ -2,6 +2,7 @@
 import { Stack } from "@mui/material";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
 
 function DrawerDev() {
   return (
@@ -9,7 +10,14 @@ function DrawerDev() {
       //añade un padding en top
       sx={{
         paddingTop: "20px",
+
       }}
+      style = {
+        {
+          width: "340px",
+          margin: 0
+        }
+      }
     >
       <Stack
         direction="column"
@@ -22,38 +30,37 @@ function DrawerDev() {
           padding: "30px",
         }}
       >
-        <Typography variant="body1" component="h1" align="left">
+        <Link variant="body1"  align="left" href="#">
           Admin
-        </Typography>
+        </Link>
         <Stack
-          //añade padding left
+          // añade padding left
           spacing={2}
-
           sx={{
             paddingLeft: "20px",
-            
           }}
         >
-          <Typography variant="body2" color="textSecondary">
+          <Link variant="body2" color="textSecondary" href="/dashboard">
             Dashboard
-          </Typography>
-          <Typography variant="body2" color="textSecondary">
+          </Link>
+          <Link variant="body2" color="textSecondary" href="#">
             Usuarios registrados
-          </Typography>
-          <Typography variant="body2" color="textSecondary">
+          </Link>
+          <Link variant="body2" color="textSecondary" href="/productos">
             Productos
-          </Typography>
-          <Typography variant="body2" color="textSecondary">
+          </Link>
+          <Link variant="body2" color="textSecondary" href="#">
             Órdenes
-          </Typography>
-          <Typography variant="body2" color="textSecondary">
+          </Link>
+          <Link variant="body2" color="textSecondary" href="#">
             Productos mas vendidos
-          </Typography>
-          <Typography variant="body2" color="textSecondary">
+          </Link>
+          <Link variant="body2" color="textSecondary" href="#">
             Series
-          </Typography>
+          </Link>
         </Stack>
       </Stack>
+      
     </Container>
   );
 }

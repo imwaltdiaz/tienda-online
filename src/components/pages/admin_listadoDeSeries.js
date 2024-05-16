@@ -10,12 +10,13 @@ function ListadoDeSeries() {
     <>
       <Stack
         direction="row"
-        justifyContent="space-around"
-        alignItems="center"
+        justifyContent="flex-start"
+        alignItems="flex-start"
+        paddingLeft="2vw"
       >
         <Box
           sx={{
-            width: '15.80%',
+            width: '15.80vw',
             height: '76vh', 
             bgcolor: '#F6F6F6',
           }}
@@ -25,11 +26,26 @@ function ListadoDeSeries() {
           direction="column"
           justifyContent="flex-start"
           alignItems="space-around"
+          paddingLeft="2vw"
         >
           <TitleBar title={'Listado de Series'} />
-          <TextField id='Serie' label='Ingresar nombre, descripcion o ID' variant='outlined'></TextField>
-          <Box>
-
+          <TextField id='Serie' label='Ingresar nombre, descripcion o ID' variant='outlined' 
+            sx={{
+              paddingTop: "15px",
+              paddingBottom: "30px",
+              height: '45px',
+              width: '77vw',
+            }}
+          >
+          </TextField>
+          <Box
+            sx={{
+              width: '100%',
+              height: '55vh',
+              bgcolor: '#F6F6F6',
+            }}
+          >
+            
           </Box>
         </Stack>
       </Stack>

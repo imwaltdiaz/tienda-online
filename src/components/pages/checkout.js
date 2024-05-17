@@ -106,7 +106,7 @@ export function BoxPago() {
     </Box>
   );
 }
-export function BoxItem() {
+export function BoxItem({nombre,precio}) {
     return (
       <Box
         height={300}
@@ -121,54 +121,57 @@ export function BoxItem() {
         sx={{ border: '2px solid grey' }}
       >            
         <FormLabel><b>Items en Pedido</b></FormLabel>
-        <Stack direction={'row'} spacing={2}>
-        <Typography variant="body1">1 x Juego de Cartas Pokemon Masters League</Typography>
-        <Typography variant="body1">S/ 50.00</Typography>
-        </Stack>
-        <Stack direction={'row'} spacing={2}>
-        <Typography variant="body1">2 x Juego de Cartas Magic The Gathering</Typography>
-        <Typography variant="body1">S/ 50.00</Typography>
-        </Stack>
-        
-      </Box>
-    );
-  }
-  export function BoxResOrd() {
-    return (
-      <Box
-        height={300}
-        width={500}
-        my={2}
-        display="flex"
-        flexDirection="column"
-        alignItems="right"
-        justifyContent="space-between"
-        gap={2}
-        p={2}
-        sx={{ border: '2px solid grey' }}
-      >            
-        <FormLabel><b>Resumen de Orden</b></FormLabel>
-        <Stack direction={'row'} spacing={1}>
-        <Typography variant="body1">Subtotal:</Typography>
-        <Typography variant="body1">S/ 100.00</Typography>
-        </Stack>
-        <Stack direction={'row'} spacing={1}>
-        <Typography variant="body1">Envío :</Typography>
-        <Typography variant="body1">S/ 17.00</Typography>
-        </Stack>
-        <Stack direction={'row'} spacing={1}>
-        <Typography variant="body1">Impuestos:</Typography>
-        <Typography variant="body1">S/ 18.00</Typography>
-        </Stack>
-        <Stack direction={'row'} spacing={1}>
-        <Typography variant="body1">Total:</Typography>
-        <Typography variant="body1">S/ 135.00</Typography>
-        </Stack>
-        <Box alignSelf="center"> 
-          <Button variant="contained" color="primary"> 
-            Completar orden
-          </Button>
+        <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
+        <Box display="flex" flexDirection="row" justifyContent="space-around" width="60%">
+          <Stack direction="column" spacing={3}>
+            <Typography variant="body1">{nombre}</Typography>
+            <Typography variant="body1">{nombre}</Typography>
+          </Stack>
+          <Stack direction="column" spacing={3}>
+            <Typography variant="body1">{`S/ ${precio}`}</Typography>
+            <Typography variant="body1">{`S/ ${precio}`}</Typography>
+          </Stack>
         </Box>
+        </Box>  
       </Box>
     );
   }
+
+export function BoxResOrd({ subtotal, envio, impuestos, total }) {
+  return (
+    <Box
+      height={300}
+      width={500}
+      my={2}
+      display="flex"
+      flexDirection="column"
+      justifyContent="space-between"
+      gap={2}
+      p={2}
+      sx={{ border: '2px solid grey' }}
+    >
+      <FormLabel><b>Resumen de Orden</b></FormLabel>
+      <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
+        <Box display="flex" flexDirection="row" justifyContent="space-around" width="60%">
+          <Stack direction="column" spacing={3}>
+            <Typography variant="body1">Subtotal:</Typography>
+            <Typography variant="body1">Envío:</Typography>
+            <Typography variant="body1">Impuestos:</Typography>
+            <Typography variant="body1">Total:</Typography>
+          </Stack>
+          <Stack direction="column" spacing={3}>
+            <Typography variant="body1">{`S/ ${subtotal}`}</Typography>
+            <Typography variant="body1">{`S/ ${envio}`}</Typography>
+            <Typography variant="body1">{`S/ ${impuestos}`}</Typography>
+            <Typography variant="body1">{`S/ ${total}`}</Typography>
+          </Stack>
+        </Box>
+        <Button variant="contained" color="primary">
+          Completar orden
+        </Button>
+      </Box>
+    </Box>
+  );
+}
+
+  

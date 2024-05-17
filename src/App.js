@@ -13,7 +13,16 @@ function App() {
   return (
     <>
       <Header/>
-      <ItemsCarro/>
+      <ItemsCheckOut/>
+      <Box display={'flex'} justifyContent="space-evenly">
+        <BoxDireccion/>
+        <BoxPago/>
+      </Box>
+      <MetodoEnvio/>
+      <Box display={'flex'} justifyContent= "space-evenly">
+        <BoxItem/>
+        <BoxResOrd/>
+      </Box>
       <Footer/>
     </>
   );

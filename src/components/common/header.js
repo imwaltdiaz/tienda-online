@@ -6,7 +6,7 @@ function Header() {
       sx = {{
         color: '#fff',
         padding: '20px',
-        marginBottom: '20px'
+        marginBottom: '20px',
       }}
     >
       TIENDA

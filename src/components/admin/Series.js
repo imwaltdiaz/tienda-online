@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import TitleBar from '../common/titleBar';
 import DataTable from '../common/dataTable';
 
-function ListadoDeSeries() {
+export function Series() {
   return (
     <>
       <Stack
@@ -15,14 +15,6 @@ function ListadoDeSeries() {
         alignItems="flex-start"
         paddingLeft="2vw"
       >
-        <Box
-          sx={{
-            width: '15.80vw',
-            height: '76vh', 
-            bgcolor: '#F6F6F6',
-          }}
-        >
-        </Box>
         <Stack
           direction="column"
           justifyContent="flex-start"
@@ -54,4 +46,3 @@ function ListadoDeSeries() {
   );
 }
 
-export default ListadoDeSeries;

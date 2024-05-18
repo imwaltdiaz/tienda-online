@@ -4,6 +4,7 @@ import Footer from '../common/footer';
 import { Container, Stack, TextField, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import TitleBar from '../common/titleBar';
+import DataTable from '../common/dataTable';
 
 function ListadoDeSeries() {
   return (
@@ -45,7 +46,7 @@ function ListadoDeSeries() {
               bgcolor: '#F6F6F6',
             }}
           >
-            
+            <DataTable columnas={["1","2","3","4","5"]}/>
           </Box>
         </Stack>
       </Stack>

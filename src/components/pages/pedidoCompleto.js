@@ -2,6 +2,8 @@ import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Link from '@mui/joy/Link';
+import Footer from '../common/footer';
+import Header from '../common/header';
 import Divider from '@mui/material/Divider';
 import { Stack } from '@mui/material';
 import SCollection from '../common/SCollection';
@@ -11,8 +13,8 @@ import SCollection from '../common/SCollection';
 
 export default function TermPed(){
     return(
-
         <>
+        <Header/>
         <Typography variant="h5" component="p" sx={{ textAlign: 'center' }}>   
         Muchas gracias por su pedido!
         </Typography>
@@ -72,6 +74,7 @@ export default function TermPed(){
                  />
              </Stack>
             </Box>
+            <Footer/>
         </>
     )
 }

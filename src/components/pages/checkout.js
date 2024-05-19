@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
+import Footer from '../common/footer';
+import Header from '../common/header';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
@@ -15,6 +17,7 @@ import { styled } from '@mui/material/styles';
 export default function ItemsCheckOut() {
   return (
     <>
+    <Header/>
       <Typography variant="h5" component="p">   
         ¡Casi listo! Tu orden no estará completa hasta que revises y presiones el botón "Completar la orden" al final de la página
       </Typography>
@@ -139,6 +142,7 @@ export function BoxItem({nombre,precio}) {
 
 export function BoxResOrd({ subtotal, envio, impuestos, total }) {
   return (
+    <>
     <Box
       height={300}
       width={500}
@@ -171,6 +175,8 @@ export function BoxResOrd({ subtotal, envio, impuestos, total }) {
         </Button>
       </Box>
     </Box>
+    <Footer/>
+    </>
   );
 }
 

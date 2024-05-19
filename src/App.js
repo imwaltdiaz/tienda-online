@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-import Dashboard from './components/pages/admin_paginaPrincipal';
-import Header from './components/common/header';
-import Footer from './components/common/footer';
-import ItemsCheckOut, { BoxDireccion , MetodoEnvio, BoxPago, Prueba, BoxItem, BoxResOrd} from './components/pages/checkout';
-import ItemsCarro, {ListaItemCarr, Compil, BtnPago} from './components/pages/carritoDeCompras';
-import TermPed from './components/pages/pedidoCompleto';
-import { Box } from '@mui/material';
-import { CoPresent } from '@mui/icons-material';
-
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import CarritoDeCompras from './components/pages/carritoDeCompras';
+import Checkout from './components/pages/checkout';
+import PedidoCompleto from './components/pages/pedidoCompleto';
 
 function App() {
   return (
-    <>
-      <Header/>
-        <TermPed/>
-      <Footer/>
-    </>
+    <div>
+      <BrowserRouter> 
+        <Routes>
+          <Route index element={<CarritoDeCompras />} />
+          <Route path='/carritoDeCompras' element={<CarritoDeCompras />} />
+          <Route path='/checkout' element={<Checkout />} />
+          <Route path='/pedidoCompleto' element={<PedidoCompleto />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

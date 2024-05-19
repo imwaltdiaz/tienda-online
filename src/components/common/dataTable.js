@@ -7,7 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-//const columnas = ["1", "2", "3","4","5"];
+const datos = ["1", "2", "3","4","5"];
 
 export default function DataTable({columnas}) {
   /*function createData(name, calories, fat, carbs, protein) {
@@ -45,7 +45,19 @@ export default function DataTable({columnas}) {
         </TableRow>
       </TableHead>
       <TableBody>
-        {/* Add your code here */}
+        {datos.map((dato, index) => (
+          <TableRow key={index}>
+            {columnas.map((columna) => (
+              <TableCell key={columna} align="right">
+                {dato[columna.toLowerCase()]}
+              </TableCell>
+            ))}
+            <TableCell>
+              <button>Editar</button>
+              <button>Eliminar</button>
+            </TableCell>
+          </TableRow>
+        ))}
       </TableBody>
     </Table>
   );

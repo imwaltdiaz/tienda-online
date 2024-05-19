@@ -5,8 +5,11 @@ import { Container, Stack, TextField, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import TitleBar from '../common/titleBar';
 import DataTable from '../common/dataTable';
+import DataTable2 from '../common/dataTable2';
 
 export function Series() {
+  const columnas = ["id",200,"firstName",300,"lastName",130,"age",90];
+
   return (
     <>
       <Stack
@@ -36,9 +39,12 @@ export function Series() {
               width: '100%',
               height: '55vh',
               bgcolor: '#F6F6F6',
+              '& .Cabecera': {
+                backgroundColor: '#F6F6F6',
+              },
             }}
           >
-            <DataTable columnas={["1","2","3","4","5"]}/>
+            <DataTable2 columnas={columnas}/>
           </Box>
         </Stack>
       </Stack>

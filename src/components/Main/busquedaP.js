@@ -7,6 +7,8 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import Header from '../common/header';
+import Footer from '../common/footer';
 function Busqueda(){
     
     const [selectedValue, setSelectedValue] = useState(1);
@@ -17,6 +19,7 @@ function Busqueda(){
 
     return(
         <>
+            <Header/>
             <Box
                 sx={{
                     display : 'flex',
@@ -100,7 +103,7 @@ function Busqueda(){
                     <Pagination count={10} shape="rounded"/>
                 </Stack>
             </Box>
-            
+            <Footer/>
         </>
     );
 }

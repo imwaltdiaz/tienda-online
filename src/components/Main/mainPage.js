@@ -2,10 +2,13 @@ import Stack from '@mui/material/Stack';
 import SCollection from '../common/SCollection';
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import Header from '../common/header';
+import Footer from '../common/footer';
 
 function Collections(){
     return(
        <>   
+            <Header/>
             <Box
             //Coleccion de Items
             sx={{
@@ -142,7 +145,7 @@ function Collections(){
              </Stack>
             </Box>
 
-            <hr style={{ border: "5px solid black", width: "100%" }} />
+            <hr style={{ border: "5px solid black", width: "100%"}} />
 
             <Typography sx={{fontSize : '4rem'}}>NUEVOS</Typography>
 
@@ -234,6 +237,7 @@ function Collections(){
                  />
                 </Stack>
             </Box>
+            <Footer/>
        </>
     );
 }

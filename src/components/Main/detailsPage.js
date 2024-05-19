@@ -6,10 +6,13 @@ import ListItem from '@mui/joy/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import Header from '../common/header';
+import Footer from '../common/footer';
 
 function Details(){
     return(
         <>
+            <Header/>
             <Typography sx={{fontSize : '2rem', px : 8}}>Titulo del Producto:</Typography>
 
             <br/>
@@ -68,6 +71,7 @@ function Details(){
                     </ListItem>
                 </List>
             </Box>
+            <Footer/>
         </>
         
     );

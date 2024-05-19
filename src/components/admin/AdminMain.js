@@ -14,8 +14,9 @@ export default function AdminMain() {
       <Header/>
       <Stack
         direction="row"
-        justifyContent="space-between"
-        
+        justifyContent="flex-start"
+        alignContent="flex-start"    
+        paddingLeft="1vw"   
       >
         <DrawerDev />
         

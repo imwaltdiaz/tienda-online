@@ -19,7 +19,7 @@ function Details(){
             <DetailsBox/>
             <Typography variant="body1" component="p" fontWeight="bold" px={8} pt={2}>Descripcion:</Typography>
             <Typography variant="body1" component="p" px={8} pt={2}>
-                Descripcion del objeto
+                Descripcion del producto
             </Typography>
             
             <Box

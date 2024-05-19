@@ -4,11 +4,11 @@ import Footer from '../common/footer';
 import { Container, Stack, TextField, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import TitleBar from '../common/titleBar';
-import DataTable from '../common/dataTable';
 import DataTable2 from '../common/dataTable2';
 
 export function Series() {
   const columnas = ["id",200,"firstName",300,"lastName",130,"age",90];
+  const datos = [1, 'Snow', 'Jon', 35, 2, 'Lannister', 'Cersei', 42, 3, 'Lannister', 'Jaime', 45, 4, 'Stark', 'Arya', 16, 5, 'Targaryen', 'Daenerys', null, 6, 'Melisandre', null, 150, 7, 'Clifford', 'Ferrara', 44, 8, 'Frances', 'Rossini', 36, 9, 'Roxie', 'Harvey', 65]
 
   return (
     <>
@@ -44,7 +44,7 @@ export function Series() {
               },
             }}
           >
-            <DataTable2 columnas={columnas}/>
+            <DataTable2 columnas={columnas} datos={datos}/>
           </Box>
         </Stack>
       </Stack>

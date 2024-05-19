@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 
-const Datos2 = [1, 'Snow', 'Jon', 35, 2, 'Lannister', 'Cersei', 42, 3, 'Lannister', 'Jaime', 45, 4, 'Stark', 'Arya', 16, 5, 'Targaryen', 'Daenerys', null, 6, 'Melisandre', null, 150, 7, 'Clifford', 'Ferrara', 44, 8, 'Frances', 'Rossini', 36, 9, 'Roxie', 'Harvey', 65];
-
-export default function DataTable2({columnas}) {
+export default function DataTable2({columnas,datos}) {
   const nColumnas = columnas.length;
   const columns: GridColDef[] = [];
 
@@ -26,7 +24,10 @@ export default function DataTable2({columnas}) {
     },
   ];*/
   
-  const nDatos = Datos2.length / nColumnas;
+  const nFilas = Math.floor(datos.length / (nColumnas/2));
+  console.log(nFilas);
+  console.log(nColumnas);
+  console.log(datos.length);
   /*const rows = [
     { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
     { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
@@ -39,10 +40,10 @@ export default function DataTable2({columnas}) {
     { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
   ];*/
   const rows = [];
-  for (let i = 0; i < nDatos; i++) {
-    let row = {id: null, lastName: null, firstName: null, age: null};
-    for (let j = 0; j < nColumnas; j++) {
-      row[columns[j].field] = Datos2[i*nColumnas+j];
+  for (let i = 0; i < nFilas; i++) {
+    let row = {};
+    for (let j = 0; j < nColumnas/2; j++) {
+      row[columns[j].field] = datos[i*nColumnas/2+j];
     }
     rows.push(row);
   }

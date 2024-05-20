@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, TextField, Button, Typography, Box, Link } from '@mui/material';
 
-const ForgotPasswordPage = () => {
+const ForgotPasswordPage = ({ onBackToLogin }) => {
   const [email, setEmail] = useState('');
   const [emailSent, setEmailSent] = useState(false);
 
@@ -36,7 +36,7 @@ const ForgotPasswordPage = () => {
           </Typography>
         )}
         <Box sx={{ mt: 2 }}>
-          <Link href="/login" variant="body2">
+          <Link href="#" variant="body2" onClick={onBackToLogin}>
             Regresar a Login
           </Link>
         </Box>

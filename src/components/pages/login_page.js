@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, TextField, Button, Typography, Box, Link } from '@mui/material';
 
-const LoginPage = () => {
+const LoginPage = ({ onForgotPassword, onCreateAccount, onLoginSuccess }) => {
   const [formData, setFormData] = useState({
     correo: '',
     password: ''
@@ -15,7 +15,6 @@ const LoginPage = () => {
       ...prevData,
       [name]: value
     }));
-
     setMostrarOpciones(true);
   };
 
@@ -23,7 +22,7 @@ const LoginPage = () => {
     event.preventDefault();
     const { correo, password } = formData;
 
-    if (correo !== 'user@example.com' || password !== 'password123') {
+    if (correo !== 'nicole@gmail.com' || password !== '123456') {
       setMensajeError('email o password incorrecto');
       setMostrarOpciones(false);
       return;
@@ -35,6 +34,7 @@ const LoginPage = () => {
       password: ''
     });
     setMensajeError('');
+    onLoginSuccess(); // Navega a la pantalla principal
   };
 
   return (
@@ -81,10 +81,10 @@ const LoginPage = () => {
           </Button>
           {mostrarOpciones && (
             <Box sx={{ mt: 2 }}>
-              <Link href="#" variant="body2">
+              <Link href="#" variant="body2" onClick={onForgotPassword}>
                 Olvidé mi contraseña
               </Link>
-              <Link href="#" variant="body2" sx={{ ml: 1 }}>
+              <Link href="#" variant="body2" sx={{ ml: 1 }} onClick={onCreateAccount}>
                 No tengo cuenta, deseo registrarme
               </Link>
             </Box>

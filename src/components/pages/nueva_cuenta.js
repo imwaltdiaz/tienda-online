@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Container, TextField, Button, Typography, Box } from '@mui/material';
+import { Container, TextField, Button, Typography, Box, Link } from '@mui/material';
 
-const NuevaCuenta = () => {
+const NuevaCuenta = ({ onBackToLogin }) => {
   const [formData, setFormData] = useState({
     nombre: '',
     apellido: '',
@@ -37,6 +37,7 @@ const NuevaCuenta = () => {
       confirmarPassword: ''
     });
     setMensajeError('');
+    onBackToLogin();
   };
 
   return (
@@ -104,6 +105,11 @@ const NuevaCuenta = () => {
           >
             Crear nueva cuenta
           </Button>
+          <Box sx={{ mt: 2 }}>
+            <Link href="#" variant="body2" onClick={onBackToLogin}>
+              Regresar a Login
+            </Link>
+          </Box>
         </Box>
       </Box>
     </Container>

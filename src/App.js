@@ -8,6 +8,8 @@ import Collections from './components/Main/mainPage';
 import Details from './components/Main/detailsPage';
 import Busqueda from './components/Main/busquedaP';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+
 function App() {
   return (
     <>
@@ -16,10 +18,11 @@ function App() {
           <Route index element={<Collections/>}/>
           <Route path="/busqueda" element={<Busqueda/>}/>
           <Route path="/detalles" element={<Details/>}/>
+          
         </Routes>
       
       </BrowserRouter>        
-
+    <AdminMain></AdminMain>
     </>
   );
 }

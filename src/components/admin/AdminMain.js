@@ -8,6 +8,12 @@ import { Dashboard } from "./Dashboard";
 import {Productos} from "./Productos"
 import {Series} from "./Series"
 
+
+import Agregar from "./Agregar";
+import AgregarProducto from "./AgregarProducto";
+import Lista_Usuarios from "../pages/Lista_Usuarios";
+
+
 export default function AdminMain() {
   return (
     <>
@@ -24,8 +30,11 @@ export default function AdminMain() {
           <Routes>
           <Route index element = {<Dashboard/>}/>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/lista-usuarios" element={<Lista_Usuarios />} />
           <Route path="/productos" element={<Productos />} />
           <Route path="/series" element={<Series />} />
+          <Route path="/agregar" element={<Agregar/>} />
+          <Route path="/agregarproducto" element={<AgregarProducto/>} />
           </Routes>
         </BrowserRouter>
       </Stack>

@@ -1,9 +1,9 @@
 import DetailsBox from "./detailsBox";
-import List from '@mui/joy/List';
-import ListItem from '@mui/joy/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+// import List from '@mui/joy/List';
+// import ListItem from '@mui/joy/ListItem';
+// import ListItemIcon from '@mui/material/ListItemIcon';
+// import ListItemText from '@mui/material/ListItemText';
+// import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import Header2 from '../common/header2';
 import Footer from '../common/footer';
 import React, { useState } from 'react';
@@ -35,7 +35,7 @@ function Details(){
                 }}
             >
                 <Typography variant="body1" component="p" fontWeight="bold"pt={2}>Caracteristicas del producto:</Typography>
-                <List>
+                {/* <List>
                     <ListItem>
                         <ListItemIcon>
                             <FiberManualRecordIcon style={{ color: 'black' }} />
@@ -72,7 +72,7 @@ function Details(){
                         </ListItemIcon>
                         <ListItemText primary="Combinable con otras figuras" />
                     </ListItem>
-                </List>
+                </List> */}
             </Box>
   
             <Footer/>

@@ -9,11 +9,15 @@ function DrawerDev() {
   return (
     <Container
       //añade un padding en top
-      style = {
-        {
-          width: "340px",
-          margin: 0
-        }
+      //añade max width de 250px
+
+      sx={{
+        paddingTop: "20px",
+        width: "340px",
+        margin: 0
+
+
+      }
       }
     >
       <Box

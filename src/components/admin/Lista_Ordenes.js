@@ -6,10 +6,10 @@ import Box from '@mui/material/Box';
 import TitleBar from '../common/titleBar';
 import DataTable2 from '../common/dataTable2';
 
-export function Usuarios(){
-    
-    const colum = ["ID",200,"Nombre",300,"Apellido",300,"Correo",150,"Fecha de registro",150,"Estado",90,"Acciones", 90];
-    const ejem = ["1", "Jaime", "Vilchez", "20215864@aloe.ulima.edu.pe", "19/05/2024", "Activo", "Activar/Desactivar"];
+export function Lista_Ordenes(){
+    const columunas = ["id",50,"Usuario",50,"Fecha de orden",200,"Total",50,"Correo",50,"Estado",50,"Acciones", 50]
+    const datos = [1, "Jorge Salas xd", "30/05/2024", "S/500", "BotenASalas@gmail.com", "Pendiente", "Ver",
+                   2, "Nicole", "26/01/2023", "S/300", "hollowedRino@gmail.com", "Entregado", "Ver"]
     return(
         <>
         <Stack
@@ -17,8 +17,8 @@ export function Usuarios(){
           justifyContent="flex-start"
           paddingLeft="1vw"
         >
-          <TitleBar title={'Usuarios registrados'} />
-          <input type="text" id='Users' placeholder='Buscar nombre, lista o correo' variant='outlined' 
+          <TitleBar title={'Ordenes'} />
+          <TextField id='Orders' placeholder='Buscar por nombre o apellido de usuario o numero de orden' variant='outlined' 
             sx={{
               paddingTop: "15px",
               paddingBottom: "30px",
@@ -26,10 +26,9 @@ export function Usuarios(){
               width: '77vw',
             }}
           >
-          </input>
-            <DataTable2 columnas={colum} datos={ejem}/>
+          </TextField>
+            <DataTable2 columnas={columunas} datos={datos}/>
         </Stack>
       </>
-    );
-    
+    );  
 }

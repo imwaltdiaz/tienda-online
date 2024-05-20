@@ -5,9 +5,10 @@ import { Container, Drawer, Stack } from "@mui/material";
 import DrawerDev from "./DrawerDev";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Dashboard } from "./Dashboard";
-import {Productos} from "./Productos"
-import {Series} from "./Series"
-
+import {Productos} from "./Productos";
+import {Series} from "./Series";
+import {Lista_Usuarios} from "./Lista_Usuarios";
+import {Lista_Ordenes } from "./Lista_Ordenes";
 export default function AdminMain() {
   return (
     <>
@@ -26,6 +27,8 @@ export default function AdminMain() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/productos" element={<Productos />} />
           <Route path="/series" element={<Series />} />
+          <Route path="/Lista_Usuarios" element={<Lista_Usuarios />} />
+          <Route path="/Lista_Ordenes" element={<Lista_Ordenes />} />
           </Routes>
         </BrowserRouter>
       </Stack>

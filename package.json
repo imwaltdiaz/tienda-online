@@ -6,11 +6,17 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@fontsource/roboto": "^5.0.13",
+<<<<<<< HEAD
     "@mui/icons-material": "^5.15.18",
     "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.15.18",
     "@mui/x-data-grid": "^7.5.0",
     "@mui/x-date-pickers": "^7.4.0",
+=======
+    "@mui/icons-material": "^5.15.17",
+    "@mui/joy": "^5.0.0-beta.36",
+    "@mui/material": "^5.15.17",
+>>>>>>> origin/rodrigo
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -18,7 +24,11 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1",
+<<<<<<< HEAD
     "react-scripts": "5.0.1",
+=======
+    "react-scripts": "^5.0.1",
+>>>>>>> origin/rodrigo
     "web-vitals": "^2.1.4"
   },
   "scripts": {

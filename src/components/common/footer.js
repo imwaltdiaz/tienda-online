@@ -14,7 +14,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import ListFooter from "./listFooter";
 
-export default function Footer() {
+function Footer() {
   return (
     <Box
       sx={{
@@ -92,3 +92,5 @@ export default function Footer() {
     </Box>
   );
 }
+
+export default Footer;

@@ -6,6 +6,7 @@ import DrawerDev from "./DrawerDev";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Dashboard } from "./Dashboard";
 import {Productos} from "./Productos"
+import Agregar from "./Agregar";
 
 export default function AdminMain() {
   return (
@@ -23,6 +24,7 @@ export default function AdminMain() {
           <Route index element = {<Dashboard/>}/>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/productos" element={<Productos />} />
+          <Route path="/agregar" element={<Agregar/>} />
           </Routes>
         </BrowserRouter>
       </Stack>

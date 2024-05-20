@@ -74,7 +74,7 @@ function Details(){
                     </ListItem>
                 </List>
             </Box>
-   
+  
             <Footer/>
         </>
         

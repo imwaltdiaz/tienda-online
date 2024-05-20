@@ -9,7 +9,7 @@ import Button  from '@mui/material';
 
 function Collections(){
     return(
-       <>   
+        <>   
             <Header2/>
             <SearchBar/>
             <Box

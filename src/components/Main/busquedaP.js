@@ -2,12 +2,11 @@ import { Box } from "@mui/material";
 import React, { useState } from 'react';
 import Typography from "@mui/material/Typography";
 import ListaItemCarr from "../common/ItemBusqueda";
-import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import Header from '../common/header';
+import Header2 from '../common/header2';
 import Footer from '../common/footer';
 function Busqueda(){
     
@@ -19,7 +18,7 @@ function Busqueda(){
 
     return(
         <>
-            <Header/>
+            <Header2/>
             <Box
                 sx={{
                     display : 'flex',

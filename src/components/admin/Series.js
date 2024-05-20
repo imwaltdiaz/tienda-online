@@ -18,7 +18,7 @@ export function Series() {
         paddingLeft="1vw"
       >
         <TitleBar title={'Listado de Series'} />
-        <TextField id='Serie' label='Ingresar nombre, descripcion o ID' variant='outlined' 
+        <TextField id='Serie' placeholder='Ingresar nombre, descripcion o ID' variant='outlined' 
           sx={{
             paddingTop: "15px",
             paddingBottom: "30px",

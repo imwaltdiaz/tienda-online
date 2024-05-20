@@ -3,7 +3,7 @@ import { DataGrid, GridColDef } from '@mui/x-data-grid';
 
 export default function DataTable2({columnas,datos}) {
   const nColumnas = columnas.length;
-  const columns: GridColDef[] = [];
+  const columns = [];
 
   for (let i = 0; i < nColumnas-1; i+=2) {
     columns.push({ field: columnas[i],headerClassName: "Cabecera", headerName: columnas[i], width: columnas[i+1] });

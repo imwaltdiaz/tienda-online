@@ -49,7 +49,7 @@ function DrawerDev() {
             <Link variant="body2" color="textSecondary" href="/dashboard">
               Dashboard
             </Link>
-            <Link variant="body2" color="textSecondary" href="#">
+            <Link variant="body2" color="textSecondary" href="/lista-usuarios">
               Usuarios registrados
             </Link>
             <Link variant="body2" color="textSecondary" href="/productos">

@@ -15,7 +15,6 @@ export function Series() {
       <Stack
         direction="column"
         justifyContent="flex-start"
-        alignItems="space-around"
         paddingLeft="1vw"
       >
         <TitleBar title={'Listado de Series'} />

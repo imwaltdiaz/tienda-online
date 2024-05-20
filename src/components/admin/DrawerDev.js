@@ -18,16 +18,19 @@ function DrawerDev() {
     >
       <Box
         sx={{
-          width: '15.80vw',
+          width: '15vw',
           height: '76vh', 
           bgcolor: '#F6F6F6',
         }}
       >
         <Stack
           direction="column"
-          justifyContent="space-between"
           spacing={2}
           alignItems="left"
+          sx={{
+            paddingTop: "20px",
+            paddingLeft: "20px",
+          }}
         >
           <Link variant="body1"  align="left" href="#">
             Admin

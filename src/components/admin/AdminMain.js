@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Dashboard } from "./Dashboard";
 import {Productos} from "./Productos"
 import Agregar from "./Agregar";
+import AgregarProducto from "./AgregarProducto";
 
 export default function AdminMain() {
   return (
@@ -25,6 +26,8 @@ export default function AdminMain() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/productos" element={<Productos />} />
           <Route path="/agregar" element={<Agregar/>} />
+          <Route path="/agregarprodudcto" element={<AgregarProducto/>} />
+
           </Routes>
         </BrowserRouter>
       </Stack>

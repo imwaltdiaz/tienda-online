@@ -8,8 +8,12 @@ function DrawerDev() {
   return (
     <Container
       //añade un padding en top
+      //añade max width de 250px
+
       sx={{
         paddingTop: "20px",
+        maxWidth: "250px",
+
 
       }}
       style = {

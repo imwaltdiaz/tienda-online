@@ -8,6 +8,7 @@ import {
   Card,
   CardContent,
   CardActions,
+  Stack,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
@@ -32,21 +33,22 @@ export default function AgregarProducto() {
             backgroundColor: "#f5f5f5",
             padding: "10px",
             fontWeight: "bold",
+            mb: "20px",
           }}
         >
           Agregar Producto
         </Typography>
         <form>
-          <Grid container spacing={2}
-            sx = {
-              {
-                mt: '5px',
-              }
-            }>
-            <Grid item xs={6}>
+          <Stack direction="row" justifyContent="space-between">
+            <Stack
+              direction="column "
+              justifyContent="space-evenly"
+              gap="30px"
+              alignItems="center"
+            >
               <Box
                 sx={{
-                  width: "90%",
+                  width: "380px",
                   height: 200,
                   border: "1px solid #ddd",
                   display: "flex",
@@ -60,19 +62,53 @@ export default function AgregarProducto() {
                 component="label"
                 fullWidth
                 sx={{
-                  maxWidth: "50%",
+                  width: "250px",
                 }}
               >
                 Agregar Imagen
-                <input
-                  type="file"
-                  hidden
-                  //añadele maximo de tamaño
-                />
+                <input type="file" hidden />
               </Button>
-            </Grid>
-            <Grid item xs={6}></Grid>
-          </Grid>
+            </Stack>
+            <Stack direction="column " alignItems="left" width="100%" ml="40px">
+              <label>Nombre</label>
+              <TextField
+                label="Nombre"
+                fullWidth
+                margin="normal"
+                size="small"
+                sx={{
+                  marginTop: '10px',
+                }}
+              />
+              <label>Descripción</label>
+              <TextField
+                label="Descripcion"
+                fullWidth
+                //hazle tamaño altura mas grande
+                multiline
+                rows={2}
+                margin="normal"
+                size="big"
+                sx={{
+                  marginTop: '10px',
+                }}
+              />
+              <label>Características</label>
+              <TextField
+                label="Descripcion"
+                fullWidth
+                //hazle tamaño altura mas grande
+                multiline
+                rows={4}
+                margin="normal"
+                size="big"
+                sx={{
+                  marginTop: '10px',
+                }}
+              />
+              
+            </Stack>
+          </Stack>
         </form>
       </Box>
     </>

@@ -3,8 +3,7 @@ import './App.css';
 import AdminMain from './components/admin/AdminMain';
 import Header from './components/common/header';
 import Footer from './components/common/footer';
-import ListadoDeSeries from './components/admin/Series';
-
+import LoginPage from './components/pages/login_page';
 function App() {
   return (
     <>

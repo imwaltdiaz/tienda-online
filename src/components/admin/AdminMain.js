@@ -26,7 +26,7 @@ export default function AdminMain() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/productos" element={<Productos />} />
           <Route path="/agregar" element={<Agregar/>} />
-          <Route path="/agregarprodudcto" element={<AgregarProducto/>} />
+          <Route path="/agregarproducto" element={<AgregarProducto/>} />
 
           </Routes>
         </BrowserRouter>

@@ -51,7 +51,7 @@ const Agregar = () => {
   };
 
   return (
-    <Box sx={{ p: 3, width: "85vw" , pr:5}}>
+    <Box sx={{ p: 3, width: "85vw", pr: 5 }}>
       <Typography variant="h4" component="h1" gutterBottom>
         Agregar Producto
       </Typography>
@@ -64,19 +64,19 @@ const Agregar = () => {
                   <Grid item xs={12} md={6}>
                     <Box
                       sx={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
                       }}
                     >
                       <Box
                         sx={{
-                          width: '100%',
+                          width: "100%",
                           height: 200,
-                          border: '1px solid #ddd',
-                          display: 'flex',
-                          justifyContent: 'center',
-                          alignItems: 'center',
+                          border: "1px solid #ddd",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
                           mb: 2,
                         }}
                       >
@@ -84,7 +84,7 @@ const Agregar = () => {
                           <img
                             src={imagenPreview}
                             alt="Vista previa"
-                            style={{ maxWidth: '100%', maxHeight: '100%' }}
+                            style={{ maxWidth: "100%", maxHeight: "100%" }}
                           />
                         ) : (
                           <Typography color="textSecondary">
@@ -92,11 +92,7 @@ const Agregar = () => {
                           </Typography>
                         )}
                       </Box>
-                      <Button
-                        variant="contained"
-                        component="label"
-                        fullWidth
-                      >
+                      <Button variant="contained" component="label" fullWidth>
                         Agregar Imagen
                         <input
                           type="file"
@@ -129,8 +125,6 @@ const Agregar = () => {
                       value={descripcion}
                       onChange={(e) => setDescripcion(e.target.value)}
                     />
-                    {/* aqui va otro grid */}
-                    
                     <Typography variant="p" gutterBottom>
                       Características
                     </Typography>
@@ -143,38 +137,46 @@ const Agregar = () => {
                       value={caracteristicas}
                       onChange={(e) => setCaracteristicas(e.target.value)}
                     />
-                    <Typography variant="p" gutterBottom>
-                      Marca
-                    </Typography>
-                    <TextField
-                      label="Marca"
-                      fullWidth
-                      margin="normal"
-                      value={marca}
-                      onChange={(e) => setMarca(e.target.value)}
-                    />
-                    <Typography variant="p" gutterBottom>
-                      Serie
-                    </Typography>
-                    <TextField
-                      label="Serie"
-                      fullWidth
-                      margin="normal"
-                      value={serie}
-                      onChange={(e) => setSerie(e.target.value)}
-                    />
-                    <Typography variant="p" gutterBottom>
-                      Precio
-                    </Typography>
-                    <TextField
-                      label="Precio"
-                      fullWidth
-                      margin="normal"
-                      type="number"
-                      value={precio}
-                      onChange={(e) => setPrecio(e.target.value)}
-                      InputProps={{ startAdornment: 'S/' }}
-                    />
+                    {/* aqui va otro grid */}
+                    <Grid item xs={3}>
+                      <Typography variant="p" gutterBottom>
+                        Marca
+                      </Typography>
+                      <TextField
+                        label="Marca"
+                        fullWidth
+                        margin="normal"
+                        value={marca}
+                        onChange={(e) => setMarca(e.target.value)}
+                      />
+                    </Grid>
+                    <Grid item xs={3}>
+                      <Typography variant="p" gutterBottom>
+                        Serie
+                      </Typography>
+                      <TextField
+                        label="Serie"
+                        fullWidth
+                        margin="normal"
+                        value={serie}
+                        onChange={(e) => setSerie(e.target.value)}
+                      />
+                    </Grid>
+                    <Grid item xs={3}>
+                      <Typography variant="p" gutterBottom>
+                        Precio
+                      </Typography>
+                      <TextField
+                        label="Precio"
+                        fullWidth
+                        margin="normal"
+                        type="number"
+                        value={precio}
+                        onChange={(e) => setPrecio(e.target.value)}
+                        InputProps={{ startAdornment: "S/" }}
+                      />
+                    </Grid>
+
                     <Typography variant="p" gutterBottom>
                       Stock
                     </Typography>
@@ -200,7 +202,12 @@ const Agregar = () => {
                 </Grid>
               </CardContent>
               <CardActions>
-                <Button type="submit" variant="contained" color="primary" fullWidth>
+                <Button
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                  fullWidth
+                >
                   Guardar
                 </Button>
               </CardActions>

@@ -15,7 +15,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route index element={<Collections/>}/>
+          <Route path="/collections" index element={<Collections/>}/>
           <Route path="/busqueda" element={<Busqueda/>}/>
           <Route path="/detalles" element={<Details/>}/>
           

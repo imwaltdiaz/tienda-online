@@ -30,6 +30,10 @@ export default function DataTable2({columnas,datos,altura='61.5vh',ancho='77vw'}
       <DataGrid
         rows={rows}
         columns={columns}
+        pageSize={5} 
+        rowsPerPageOptions={[5]} 
+        autoHeight
+
         initialState={{
           pagination: {
             paginationModel: { page: 0, pageSize: 5 },

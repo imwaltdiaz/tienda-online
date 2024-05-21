@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
 
-export function Datos_Usuario() {
+export function Cambiar_Contrasena() {
   return (
     <>
       <Stack
@@ -30,9 +30,9 @@ export function Datos_Usuario() {
             alignItems="center"
             spacing={5}
           >
-            <TextField id='nombre' placeholder='Nombre' variant='outlined'></TextField>
-            <TextField id='apellido' placeholder='Apellido' variant='outlined'></TextField>
-            <TextField id='correo' placeholder='Correo' variant='outlined'></TextField>
+            <TextField id='actual' placeholder='Actual' variant='outlined'></TextField>
+            <TextField id='nuevo' placeholder='Nuevo' variant='outlined'></TextField>
+            <TextField id='repetir' placeholder='Repetir' variant='outlined'></TextField>
             <Button variant="contained">Guardar</Button>
             
           </Stack>

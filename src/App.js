@@ -13,12 +13,12 @@ function App() {
 
       <BrowserRouter>
         <Routes>
-          <Route path="/collections" index element={<Collections />} />
+          {/* <Route path="/collections" index element={<Collections />} />
           <Route path="/busqueda" element={<Busqueda />} />
           <Route path="/detalles" element={<Details />} />
 
           <Route path="/datos_usuario" element={<Datos_Usuario />} />
-          <Route path="/cambiar_contrasena" element={<Cambiar_Contrasena />} />
+          <Route path="/cambiar_contrasena" element={<Cambiar_Contrasena />} /> */}
         </Routes>
       </BrowserRouter>
 

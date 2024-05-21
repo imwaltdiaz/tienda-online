@@ -77,7 +77,7 @@ export default function AgregarProducto() {
                 margin="normal"
                 size="small"
                 sx={{
-                  marginTop: '10px',
+                  marginTop: "10px",
                 }}
               />
               <label>Descripción</label>
@@ -90,7 +90,7 @@ export default function AgregarProducto() {
                 margin="normal"
                 size="big"
                 sx={{
-                  marginTop: '10px',
+                  marginTop: "10px",
                 }}
               />
               <label>Características</label>
@@ -103,11 +103,131 @@ export default function AgregarProducto() {
                 margin="normal"
                 size="big"
                 sx={{
-                  marginTop: '10px',
+                  marginTop: "10px",
                 }}
               />
+              <Stack
+                direction="row"
+                justifyContent="space-between"
+                alignItems="center"
+                width="100%"
+              >
+                <Stack direction="column">
+                  <label>Marca</label>
+                  <TextField
+                    label="Marca"
+                    fullWidth
+                    //hazle tamaño altura mas grande
+                    multiline
+                    rows={1}
+                    margin="normal"
+                    size="small"
+                    sx={{
+                      marginTop: "10px",
+                    }}
+                  />
+                </Stack>
+
+                <Stack direction="column">
+                  <label>Serie</label>
+                  <TextField
+                    label="Serie"
+                    fullWidth
+                    //hazle tamaño altura mas grande
+                    multiline
+                    rows={1}
+                    margin="normal"
+                    size="small"
+                    sx={{
+                      marginTop: "10px",
+                    }}
+                  />
+                </Stack>
+                <Stack direction="column">
+                  <label>Precio</label>
+                  <TextField
+                    label="S/"
+                    fullWidth
+                    //hazle tamaño altura mas grande
+                    multiline
+                    rows={1}
+                    margin="normal"
+                    size="small"
+                    sx={{
+                      marginTop: "10px",
+                    }}
+                  />
+                </Stack>
+              </Stack>
+              {/* aqui */}
+              <Stack
+                direction="row"
+                justifyContent="flex-start"
+                alignItems="center"
+                width="100%"
+                gap = '20px'
+              >
+                <Stack direction="column">
+                  <label>Precio</label>
+                  <TextField
+                    label="S/"
+                    fullWidth
+                    //hazle tamaño altura mas grande
+                    multiline
+                    rows={1}
+                    margin="normal"
+                    size="small"
+                    sx={{
+                      marginTop: "10px",
+                    }}
+                  />
+                </Stack>
+                <Stack direction="column">
+                  <label>Precio</label>
+                  <TextField
+                    label="S/"
+                    fullWidth
+                    //hazle tamaño altura mas grande
+                    multiline
+                    rows={1}
+                    margin="normal"
+                    size="small"
+                    sx={{
+                      marginTop: "10px",
+                    }}
+                  />
+                </Stack>
+
+              </Stack>
+              <Stack
+                direction="row"
+                justifyContent="flex-end"
+                alignItems="center"
+                width="100%"
+                gap = '20px'
+                //añade bordertop a 20px
+                sx={{
+                  borderTop: "1px",
+                  marginTop: "20px",
+                  paddingTop: "20px",
+                }}
+                
+              >
+                <Button
+                variant="contained"
+                component="label"
+                fullWidth
+                sx={{
+                  width: "250px",
+                }}
+              >
+                Guardar
+                <input type="file" hidden />
+              </Button>
+              </Stack>
               
             </Stack>
+            
           </Stack>
         </form>
       </Box>

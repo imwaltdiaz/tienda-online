@@ -5,10 +5,11 @@ import { Container, Stack, TextField, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import TitleBar from '../common/titleBar';
 import DataTable2 from '../common/dataTable2';
-
+import GenerarLista from './Rellenar_usuarios';
+import base_datos from './prueba';
 export function Lista_Usuarios(){
     const columunas = ["id",50,"Nombre",100,"Apellido",100,"Correo",250,"Fecha de registro",150,"Estado",150,"Acciones", 150]
-    const datos = ["1", "Leonardo", "Perez", "hdhsdh@gmail.com", "05/01/2024", "Activo", "Desactivar/Ver"]
+    const datos = GenerarLista(base_datos)
     return(
         <>
         <Stack

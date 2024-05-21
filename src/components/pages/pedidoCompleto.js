@@ -5,7 +5,7 @@ import Link from '@mui/joy/Link';
 import Footer from '../common/footer';
 import Header from '../common/header';
 import { Stack } from '@mui/material';
-import SCollection from '../common/SCollection';
+import SCollection from '../user/SCollection';
 
 
 

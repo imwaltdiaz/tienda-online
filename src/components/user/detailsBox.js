@@ -67,32 +67,45 @@ function DetailsBox(){
                 }}
             >
                 <Stack
-                    direction="column" spacing={4}
+                    direction="column" spacing={8}
                 >
-                    <Typography variant="h3" fontWeight="bold">S/88.99</Typography>
-                    <Button variant="contained">AÑADIR AL CARRITO</Button>
-                    <Typography variant="h6" fontWeight="bold">Cantidad:</Typography>
+                    <Typography variant="h3" fontWeight="bold" sx={{pt : '50px'}}>S/88.99</Typography>
+                    <Button variant="contained" sx={{width : '20vw', height : '6vh', fontSize : '30px'}}>AÑADIR AL CARRITO</Button>
+                    <Typography variant="h4" fontWeight="bold">Cantidad:</Typography>
                     <Box
                         sx={{
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            borderRadius: '4px',
-                            padding: '10px',
-                            width: '150px',
                         }}
                     >
-                        <Button variant="contained" onClick={handleDecrement} sx={{ minWidth: '30px', marginRight: '10px' }}>
+                        <Button variant="text" onClick={handleDecrement} sx={{ width: '40px',height : '40px', marginRight: '10px', fontSize : '120px'}}>
                             -
                         </Button>
-                        <Typography variant="h6" sx={{ minWidth: '30px', textAlign: 'center' }}>
+                        <Box
+                            sx={{
+                                border: '2px solid gray',
+                                borderRadius: 2,
+                                backgroundColor : 'white',
+                                display : 'flex',
+                                justifyContent : 'center',
+                                alignItems : 'center',
+                                width : '3vw',
+                                height : '3vh'
+                                
+                            }}
+                        
+                        >
+                            <Typography variant="h6" sx={{ minWidth: '30px', textAlign: 'center' }}>
                             {count}
-                        </Typography>
-                        <Button variant="contained" onClick={handleIncrement} sx={{ minWidth: '30px', marginLeft: '10px' }}>
+                            </Typography>
+                        </Box>
+                        
+                        <Button variant="text" onClick={handleIncrement} sx={{width: '40px',height : '40px', marginRight: '10px', fontSize : '60px'}}>
                             +
                         </Button>
                     </Box>
-                    <Link href="#">Ver metodos disponibles</Link>
+                    <Link href="#" variant="h4" sx={{color : 'black', textDecorationColor : 'black', pt : '80px'}}>Ver metodos disponibles</Link>
                 </Stack>
             </Box>
         </Box>

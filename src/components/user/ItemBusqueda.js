@@ -1,11 +1,8 @@
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import AspectRatio from '@mui/joy/AspectRatio';
-import Link from '@mui/joy/Link';
 import Card from '@mui/joy/Card';
 import CardContent from '@mui/joy/CardContent';
-import Divider from '@mui/material/Divider';
 import { Stack } from '@mui/material';
 
 export default function ListaItemCarr({ imagen, nombre, fabricante, precio }) {
@@ -14,7 +11,7 @@ export default function ListaItemCarr({ imagen, nombre, fabricante, precio }) {
         variant="outlined"
         orientation="horizontal"
         sx={{
-          width: 1785,
+          width: '93vw',
           height: 140,
           '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' },
           display: 'flex', 

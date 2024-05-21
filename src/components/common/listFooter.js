@@ -1,8 +1,9 @@
 import React from 'react';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import Link from '@mui/joy/Link';
 
-function ListFooter({ title, option1, option2, option3 }) {
+function ListFooter({ title, option1, option2, option3, ref1, ref2, ref3 }) {
   return (
     <Stack
       direction="column"
@@ -12,15 +13,15 @@ function ListFooter({ title, option1, option2, option3 }) {
       <Typography variant="body2" component="p" fontWeight="bold">
         {title}
       </Typography>
-      <Typography variant="body2" color="textSecondary">
+      <Link variant="body2" color="textSecondary" href={ref1}>
         {option1}
-      </Typography>
-      <Typography variant="body2" color="textSecondary">
+      </Link>
+      <Link variant="body2" color="textSecondary" href={ref2}>
         {option2}
-      </Typography>
-      <Typography variant="body2" color="textSecondary">
+      </Link>
+      <Link variant="body2" color="textSecondary" href={ref3}>
         {option3}
-      </Typography>
+      </Link>
     </Stack>
   );
 }

@@ -35,6 +35,7 @@ export default function AdminMain() {
           <Route path="/productos" element={<Productos />} />
           <Route path="/series" element={<Series />} />
           <Route path="/agregar" element={<Agregar/>} />
+          {/* <Route path="/agregar" element={<Agregar/>} /> */}
           <Route path="/agregarproducto" element={<AgregarProducto/>} />
           <Route path="/agregarserie" element={<AgregarSerie/>} />
           </Routes>

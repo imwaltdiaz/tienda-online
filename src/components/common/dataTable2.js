@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
+import Box from '@mui/material/Box';
 
-export default function DataTable2({columnas,datos}) {
+export default function DataTable2({columnas,datos,altura='61.5vh',ancho='77vw'}) {
   const nColumnas = columnas.length;
   const columns = [];
 
@@ -20,7 +21,12 @@ export default function DataTable2({columnas,datos}) {
   }
 
   return (
-    <div style={{ height: '61.5vh', width: '77vw'}}>
+    <Box
+      sx={{
+        width: {ancho},
+        height: {altura},
+      }}
+    >
       <DataGrid
         rows={rows}
         columns={columns}
@@ -30,6 +36,6 @@ export default function DataTable2({columnas,datos}) {
           },
         }}
       />
-    </div>
+    </Box>
   );
 }

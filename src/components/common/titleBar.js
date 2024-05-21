@@ -2,12 +2,12 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-function TitleBar({title}) {
+function TitleBar({title,width = '77vw'}) {
   return (
     <Box
       sx={{
         bgcolor: '#D9D9D9',
-        width: '77vw',
+        width: {width},
         height: '45px',
       }}
     >

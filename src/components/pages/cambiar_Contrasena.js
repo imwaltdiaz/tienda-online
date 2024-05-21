@@ -22,7 +22,7 @@ export function Cambiar_Contrasena() {
           paddingTop="20px"
           spacing={5}
         >
-          <TitleBar title={'Datos de Registro'}/>
+          <TitleBar title={'Cambiar contrasena'}/>
           <Stack
             display="flex"
             direction="column"

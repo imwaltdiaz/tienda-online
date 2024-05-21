@@ -58,6 +58,7 @@ function Footer() {
             title="Productos"
             option1="Más vendidos"
             option2="Nuevos"
+            ref2="#Nuevos"
             option3="Ofertas"
           />
           <ListFooter

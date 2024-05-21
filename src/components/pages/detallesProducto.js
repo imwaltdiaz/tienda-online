@@ -1,25 +1,34 @@
-import DetailsBox from "./detailsBox";
+import DetailsBox from "../user/detailsBox";
 import List from '@mui/joy/List';
 import ListItem from '@mui/joy/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-import Header2 from '../common/header2';
+import Header2 from '../user/headerU';
 import Footer from '../common/footer';
 import React, { useState } from 'react';
 import { Box, Typography, Button, Stack } from '@mui/material';
+import AppBar from '@mui/material/AppBar';
 
 function Details(){
     
     return(
         <>
             <Header2/>
-            <Typography sx={{fontSize : '2rem', px : 8}}>Titulo del Producto:</Typography>
+            <Typography sx={{fontSize : '2rem', px : 8}}>Titulo del Producto: Puede ser bastante largo</Typography>
 
             <br/>
-            <Typography sx={{fontSize : '1.5rem', px : 8}}>Por: -Serie:</Typography>
+            <Typography sx={{fontSize : '1.5rem', px : 8}}>Por: HASBRO -Serie: Avengers Endgame</Typography>
 
-            <hr style={{ border: "5px solid black", width: "93%" }} />
+            <AppBar position="static"
+                sx = {{
+                    backgroundColor: 'black',
+                    padding: '2px',
+                    marginTop : '30px',
+                    marginBottom: '50px'
+                }}
+            >
+            </AppBar>
 
             <DetailsBox/>
 

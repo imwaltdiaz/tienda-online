@@ -1,13 +1,13 @@
 import Stack from '@mui/material/Stack';
-import SCollection from '../common/SCollection';
+import SCollection from '../user/SCollection';
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Header2 from '../common/header2';
+import Header2 from '../user/headerU';
 import Footer from '../common/footer';
-import SearchBar from '../common/searchBar';
-import Button  from '@mui/material';
+import SearchBar from '../user/searchBar';
+import AppBar from '@mui/material/AppBar';
 
-function Collections(){
+function Principal(){
     return(
        <>   
             <Header2/>
@@ -15,35 +15,39 @@ function Collections(){
             <Box
             //Coleccion de Items
             sx={{
-                px : 8,
-                pt : 6
+                pt : 6,
+                mx : 8,
             }}
             >
                 <Stack
                 direction="row"
                 justifyContent="space-between"
                 alignItems="center"
+                
                 >
                     <SCollection
-                    txt="Colección de Items 1: Especiales para regresar al colegio"
+                    txtL1="Colección de Items 1: Especiales"
+                    txtL2="para regresar al colegio"
                     hiperv="Learn More"
                     src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                    width='400px'
-                    height='400px'
+                    width='25vw'
+                    height='50vh'
                     />
                     <SCollection
-                    txt="Colección de Items 2: Especiales para la casa"
+                    txtL1="Colección de Items2: Especiales"
+                    txtL2="para la casa"
                     hiperv="Learn More"
                     src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                    width='400px'
-                    height='400px'
+                    width='25vw'
+                    height='50vh'
                     />
                     <SCollection
-                    txt="Colección de Items 3: Especiales para los pequeños"
+                    txtL1="Colección de Items3: Especiales"
+                    txtL2="para los pequeños"
                     hiperv="Learn More"
                     src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                    width='400px'
-                    height='400px'
+                    width='25vw'
+                    height='50vh'
                     />
                 </Stack>
             </Box>
@@ -51,51 +55,52 @@ function Collections(){
             <Box 
                 //Items fila 1
                 sx={{
-                    px : 8,
-                    pt : 8
+                    pt: 6,
+                    mx : 8,
+                    justifyContent : 'center'
                 }}
             >
                 <Stack
-                 direction="row"
-                 justifyContent="space-between"
-                 alignItems="center"
-             >
-                 <SCollection
-                     txt="Item1"
-                     hiperv="Learn More"
-                     src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                     width='150px'
-                     height='200px'
-                 />
-                 <SCollection
-                     txt="Item1"
-                     hiperv="Learn More"
-                     src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                     width='150px'
-                     height='200px'
-                 />
-                 <SCollection
-                     txt="Item1"
-                     hiperv="Learn More"
-                     src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                     width='150px'
-                     height='200px'
-                 />
-                 <SCollection
-                     txt="Item1"
-                     hiperv="Learn More"
-                     src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                     width='150px'
-                     height='200px'
-                 />
-                 <SCollection
-                     txt="Item1"
-                     hiperv="Learn More"
-                     src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                     width='150px'
-                     height='200px'
-                 />
-             </Stack>
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                >
+                    <SCollection
+                        txtL1="Item1"
+                        hiperv="Learn More"
+                        src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
+                        width='12vw'
+                        height='30vh'
+                    />
+                    <SCollection
+                        txtL1="Item1"
+                        hiperv="Learn More"
+                        src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
+                        width='12vw'
+                        height='30vh'
+                    />
+                    <SCollection
+                        txtL1="Item1"
+                        hiperv="Learn More"
+                        src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
+                        width='12vw'
+                        height='30vh'
+                    />
+                    <SCollection
+                        txtL1="Item1"
+                        hiperv="Learn More"
+                        src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
+                        width='12vw'
+                        height='30vh'
+                    />
+                    <SCollection
+                        txtL1="Item1"
+                        hiperv="Learn More"
+                        src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
+                        width='12vw'
+                        height='30vh'
+                    />  
+                </Stack> 
             </Box>
 
             <Box
@@ -111,50 +116,58 @@ function Collections(){
                  alignItems="center"
              >
                  <SCollection
-                     txt="Item1"
+                     txtL1="Item1"
                      hiperv="Learn More"
                      src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                     width='150px'
-                     height='200px'
+                     width='12vw'
+                     height='30vh'
                  />
                  <SCollection
-                     txt="Item1"
+                     txtL1="Item1"
                      hiperv="Learn More"
                      src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                     width='150px'
-                     height='200px'
+                     width='12vw'
+                     height='30vh'
                  />
                  <SCollection
-                     txt="Item1"
+                    txtL1="Item1"
                      hiperv="Learn More"
                      src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                     width='150px'
-                     height='200px'
+                     width='12vw'
+                     height='30vh'
                  />
                  <SCollection
-                     txt="Item1"
+                     txtL1="Item1"
                      hiperv="Learn More"
                      src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                     width='150px'
-                     height='200px'
+                     width='12vw'
+                     height='30vh'
                  />
                  <SCollection
-                     txt="Item1"
+                     txtL1="Item1"
                      hiperv="Learn More"
                      src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                     width='150px'
-                     height='200px'
+                     width='12vw'
+                     height='30vh'
                  />
              </Stack>
             </Box>
 
-            <hr style={{ border: "5px solid black", width: "100%"}} />
+            <AppBar position="static"
+                sx = {{
+                    backgroundColor: 'black',
+                    padding: '10px',
+                    marginTop : '100px',
+                    marginBottom: '50px'
+                }}
+            >
+            </AppBar>
 
-            <Typography sx={{fontSize : '4rem'}} id="Nuevos">NUEVOS</Typography>
+            <Typography id="Nuevos" sx={{fontSize : '4rem', ml : 8} }>NUEVOS</Typography>
 
-            <Box
+            <Box 
                 sx={{
-                    px : 8,
+                    mx : 8,
                     pt : 8,
                 }}
             >
@@ -163,11 +176,12 @@ function Collections(){
                     justifyContent="space-between"
                 >
                     <SCollection
-                        txt="Magic The Gathering: Colección de Invierno Fase2 2024"
+                        txtL1="Magic The Gathering: Colección de Invierno Fase2 2024"
+                        txtL2="Nueva Temporada"
                         hiperv="Learn More"
                         src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                        width='1000px'
-                        height='600px'
+                        width='50vw'
+                        height='60vh'
                     />
                 <Stack
                     direction="column"
@@ -175,18 +189,18 @@ function Collections(){
                     alignItems="center"
                 >
                     <SCollection
-                        txt="Magic The Gathering: Colección de Invierno Fase2 2024"
+                        txtL1="GI Joe Classified Series Big Boa, Airborne & More"
                         hiperv="Learn More"
                         src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                        width='700px'
-                        height='300px'
+                        width='40vw'
+                        height='30vh'
                     />
                     <SCollection
-                        txt="Magic The Gathering: Colección de Invierno Fase2 2024"
+                        txtL1="Spawn 30 Anniversary"
                         hiperv="Learn More"
                         src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                        width='700px'
-                        height='300px'
+                        width='40vw'
+                        height='30vh'
                     />
                 </Stack>
                 </Stack>
@@ -204,39 +218,39 @@ function Collections(){
                  alignItems="center"
                 >
                  <SCollection
-                     txt="Item1"
+                     txtL1="Item1"
                      hiperv="Learn More"
                      src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                     width='150px'
-                     height='200px'
+                     width='12vw'
+                     height='30vh'
                  />
                  <SCollection
-                     txt="Item1"
+                     txtL1="Item1"
                      hiperv="Learn More"
                      src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                     width='150px'
-                     height='200px'
+                     width='12vw'
+                     height='30vh'
                  />
                  <SCollection
-                     txt="Item1"
+                     txtL1="Item1"
                      hiperv="Learn More"
                      src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                     width='150px'
-                     height='200px'
+                     width='12vw'
+                     height='30vh'
                  />
                  <SCollection
-                     txt="Item1"
+                     txtL1="Item1"
                      hiperv="Learn More"
                      src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                     width='150px'
-                     height='200px'
+                     width='12vw'
+                     height='30vh'
                  />
                  <SCollection
-                     txt="Item1"
+                     txtL1="Item1"
                      hiperv="Learn More"
                      src="https://blog.bangbranding.com/wp-content/uploads/2016/11/700x511_SliderInterior.jpg"
-                     width='150px'
-                     height='200px'
+                     width='12vw'
+                     height='30vh'
                  />
                 </Stack>
             </Box>
@@ -245,4 +259,4 @@ function Collections(){
     );
 }
 
-export default Collections;
+export default Principal;

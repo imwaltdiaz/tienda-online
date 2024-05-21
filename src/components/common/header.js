@@ -4,7 +4,7 @@ function Header() {
   return (
     <AppBar position="static"
       sx = {{
-        color: '#0F9CDC',
+        color: '#fff',
         padding: '20px',
         marginBottom: '20px'
       }}

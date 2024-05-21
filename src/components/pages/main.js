@@ -3,7 +3,7 @@ import React from 'react';
 import CarritoDeCompras from './carritoDeCompras'; 
 import Checkout from './checkout'; 
 import PedidoCompleto from './pedidoCompleto';
-function Main() {
+function UsersMain() {
   return (
     <div>
       <BrowserRouter> 
@@ -18,4 +18,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default UsersMain;

@@ -3,11 +3,10 @@ import Typography from '@mui/material/Typography';
 import Link from "@mui/material/Link";
 import Box from "@mui/material/Typography";
 
-function SCollection({txt,hiperv,src,width,height}){
+function SCollection({txtL1,txtL2,hiperv,src,width,height}){
     return(
         <Stack
             direction = "column"
-            justifyContent = "space-between"
             alignItems = "start"
         >
             <Box 
@@ -16,13 +15,13 @@ function SCollection({txt,hiperv,src,width,height}){
                 alt="imagen"
                 sx={{
                     maxWidth : {width},
-                    height : {height}    
+                    height : {height},
                 }}
             />
-            <Typography variant="body2">
-                {txt}
+            <Typography variant='h4' pt={4}>
+                {txtL1}<br/>{txtL2}
             </Typography>
-            <Link href="#" target="_blank" rel="noopener">
+            <Link href="/detalles" target="_blank" rel="noopener" variant='h6' sx={{pt : 2, textDecoration : 'none', color : 'black'}}>
                 {hiperv}
             </Link>
         </Stack>

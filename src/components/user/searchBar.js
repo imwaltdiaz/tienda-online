@@ -13,16 +13,10 @@ function SearchBar(){
         >
             <TextField
                 variant="outlined"
-                placeholder="Buscar"
-                sx={{width : 900}}
+                placeholder="Buscar productos por nombre..."
+                sx={{width : 2300}}
             />
-            <Button 
-            variant="contained"
-            dx={{
-                backgroundColor : 'gray',
-                color : 'white'
-            }}
-            >Buscar</Button>
+            <Button variant="contained" href="/busqueda" sx={{backgroundColor : 'gray', color : 'white', width : '5%', height : '4vh'}}>Buscar</Button>
         </Box>
     );
 }

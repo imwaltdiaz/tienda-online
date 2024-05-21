@@ -1,12 +1,12 @@
 import { Box } from "@mui/material";
 import React, { useState } from 'react';
 import Typography from "@mui/material/Typography";
-import ListaItemCarr from "../common/ItemBusqueda";
+import ListaItemCarr from "../user/ItemBusqueda";
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import Header2 from '../common/header2';
+import Header2 from '../user/headerU';
 import Footer from '../common/footer';
 function Busqueda(){
     
@@ -34,7 +34,7 @@ function Busqueda(){
                     value={selectedValue}
                     onChange={handleChange}
                     sx={{
-                        width : '300px'
+                        width : '10vw'
                     }}
                 >
                     <MenuItem value={1}>Precio</MenuItem>

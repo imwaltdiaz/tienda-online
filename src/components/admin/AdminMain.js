@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Dashboard } from "./Dashboard";
 import {Productos} from "./Productos"
 import {Series} from "./Series"
+import { AgregarSerie } from "./AgregarSerie";
 
 
 import Agregar from "./Agregar";
@@ -35,6 +36,7 @@ export default function AdminMain() {
           <Route path="/series" element={<Series />} />
           <Route path="/agregar" element={<Agregar/>} />
           <Route path="/agregarproducto" element={<AgregarProducto/>} />
+          <Route path="/agregarserie" element={<AgregarSerie/>} />
           </Routes>
         </BrowserRouter>
       </Stack>

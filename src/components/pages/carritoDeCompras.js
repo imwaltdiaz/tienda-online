@@ -3,7 +3,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import AspectRatio from '@mui/joy/AspectRatio';
 import Footer from '../common/footer';
-import Header from '../common/header';
+import Header2 from '../user/headerU';
 import Link from '@mui/joy/Link';
 import Card from '@mui/joy/Card';
 import CardContent from '@mui/joy/CardContent';
@@ -14,7 +14,7 @@ import ListaItemCarr from '../common/ObjCarrito';
 export default function ItemsCarro() {
   return (
     <>
-    <Header/>
+    <Header2/>
       <Typography variant="h4" component="p">
         Items en tu Carrito de Compras
       </Typography>

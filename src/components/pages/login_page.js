@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, TextField, Button, Typography, Box, Link } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,7 @@ const LoginPage = () => {
   });
   const [mensajeError, setMensajeError] = useState('');
   const [mostrarOpciones, setMostrarOpciones] = useState(true);
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -15,7 +17,6 @@ const LoginPage = () => {
       ...prevData,
       [name]: value
     }));
-
     setMostrarOpciones(true);
   };
 
@@ -23,7 +24,7 @@ const LoginPage = () => {
     event.preventDefault();
     const { correo, password } = formData;
 
-    if (correo !== 'user@example.com' || password !== 'password123') {
+    if (correo !== 'nicole@gmail.com' || password !== '123456') {
       setMensajeError('email o password incorrecto');
       setMostrarOpciones(false);
       return;
@@ -35,6 +36,7 @@ const LoginPage = () => {
       password: ''
     });
     setMensajeError('');
+    navigate('/pantalla-principal'); // Redirige a la página principal después de un login exitoso
   };
 
   return (
@@ -81,10 +83,10 @@ const LoginPage = () => {
           </Button>
           {mostrarOpciones && (
             <Box sx={{ mt: 2 }}>
-              <Link href="#" variant="body2">
+              <Link href="#" variant="body2" onClick={() => navigate('/perdida-contra')}>
                 Olvidé mi contraseña
               </Link>
-              <Link href="#" variant="body2" sx={{ ml: 1 }}>
+              <Link href="#" variant="body2" sx={{ ml: 1 }} onClick={() => navigate('/crear-cuenta')}>
                 No tengo cuenta, deseo registrarme
               </Link>
             </Box>

@@ -1,27 +1,28 @@
-// Dashboard
+import React from "react";
 import Header from "../common/header";
 import Footer from "../common/footer";
-import { Container, Drawer, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
 import DrawerDev from "./DrawerDev";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import { Dashboard } from "./Dashboard";
-import Productos from "./Productos"; // Cambiado para usar import default
-import { Series } from "./Series";
-import { AgregarSerie } from "./AgregarSerie";
+import Dashboard from "./Dashboard";
+import Productos from "./Productos";
+import Series from "./Series";
+import AgregarSerie from "./AgregarSerie";
 import Agregar from "./Agregar";
 import AgregarProducto from "./AgregarProducto";
 import Lista_Usuarios from "../pages/Lista_Usuarios";
 import data from './data.json'; // Supongamos que tienes los datos en este archivo
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 export default function AdminMain() {
   return (
     <>
-      <Header/>
+      <Header />
       <Stack
         direction="row"
         justifyContent="flex-start"
-        alignContent="flex-start"    
-        paddingLeft="1vw"   
+        alignContent="flex-start"
+        paddingLeft="1vw"
       >
         <DrawerDev />
         
@@ -38,7 +39,7 @@ export default function AdminMain() {
           </Routes>
         </BrowserRouter>
       </Stack>
-      <Footer/>
+      <Footer />
     </>
   );
 }

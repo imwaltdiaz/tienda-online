@@ -5,7 +5,6 @@ import { Container, Stack, TextField, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import TitleBar from '../common/titleBar';
 import DataTable2 from '../common/dataTable2';
-import base_datos from './prueba';
 export function Detalle_Usuario(User){
     const columnas = ["id", 100, "Fecha de orden",150, "Total", 150, "Productos", 150, "Estado", 200, "Acciones"]
     return(

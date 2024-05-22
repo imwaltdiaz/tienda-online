@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
 
-export function Cambiar_Contrasena() {
+export default function Cambiar_Contrasena() {
   return (
     <>
       <Stack

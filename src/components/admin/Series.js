@@ -35,7 +35,7 @@ function TablePaginationActions(props) {
   );
 }
 
-export function Series() {
+export default function Series() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredData, setFilteredData] = useState(seriesData);
   const [page, setPage] = useState(0);

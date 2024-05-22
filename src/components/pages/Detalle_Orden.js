@@ -1,16 +1,16 @@
 import * as React from 'react';
 import Header from '../common/header';
 import Footer from '../common/footer';
-import { Button, Container, Stack, TextField, Typography } from '@mui/material';
+import {Button, Container, Stack, TextField, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import TitleBar from '../common/titleBar';
 import DataTable2 from '../common/dataTable2';
-
-export function Detalle_Orden(Usuario){
+import {FormControl, FormLabel, RadioGroup, FormControlLabel, Radio} from '@mui/material';
+export function Detalle_Orden(orden_usuario){
     return(
         <>
         <Header/>
-        <TitleBar title={"Detalle de Orden de Nro "+ orden.id}/>
+        <TitleBar title={"Detalle de Orden de Nro "+ orden_usuario.id}/>
         <Stack
         direction="column"
         justifyContent="flex-start"
@@ -28,7 +28,7 @@ export function Detalle_Orden(Usuario){
         }}
         >
             Direccion de pedido:
-            {Usuario.address}
+            {orden_usuario.address}
         </Box >     
         <Box sx={{
         bgcolor: 'white',

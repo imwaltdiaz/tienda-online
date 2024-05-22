@@ -25,7 +25,7 @@ function Header2() {
             <LocalGroceryStoreIcon/>
           </IconButton>
           <Button color ="inherit" href="#" sx={{mx : '20px'}}>Ayuda</Button>
-          <Button color ="inherit" href="#" sx={{mx : '20px'}}>Mi Cuenta</Button>
+          <Button color ="inherit" href="/LoginPage" sx={{mx : '20px'}}>Mi Cuenta</Button>
           
         </Toolbar>
       </AppBar>

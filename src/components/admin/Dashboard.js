@@ -9,7 +9,7 @@ import CardContent from "@mui/material/CardContent";
 import React from "react";
 import Typography from "@mui/material/Typography";
 
-export function Dashboard() {
+export default function Dashboard() {
   const card0 = (
     <React.Fragment>
       <CardContent

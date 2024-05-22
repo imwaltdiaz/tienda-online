@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Box, Button, TextField, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, IconButton } from '@mui/material';
 
-export function AgregarSerie() {
+export default function AgregarSerie() {
   const location = useLocation();
   const { serie } = location.state;
   const [nombre, setNombre] = useState(serie.nombre);

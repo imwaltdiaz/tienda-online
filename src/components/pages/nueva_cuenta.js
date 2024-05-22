@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Container, TextField, Button, Typography, Box } from '@mui/material';
+import { Container, TextField, Button, Typography, Box, Link } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const NuevaCuenta = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ const NuevaCuenta = () => {
     confirmarPassword: ''
   });
   const [mensajeError, setMensajeError] = useState('');
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -37,6 +39,7 @@ const NuevaCuenta = () => {
       confirmarPassword: ''
     });
     setMensajeError('');
+    navigate('/LoginPage');
   };
 
   return (
@@ -104,6 +107,11 @@ const NuevaCuenta = () => {
           >
             Crear nueva cuenta
           </Button>
+          <Box sx={{ mt: 2 }}>
+            <Link href="#" variant="body2" onClick={() => navigate('/LoginPage')}>
+              Regresar a Login
+            </Link>
+          </Box>
         </Box>
       </Box>
     </Container>

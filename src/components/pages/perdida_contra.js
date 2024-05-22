@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Container, TextField, Button, Typography, Box, Link } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const ForgotPasswordPage = () => {
   const [email, setEmail] = useState('');
   const [emailSent, setEmailSent] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -36,7 +38,7 @@ const ForgotPasswordPage = () => {
           </Typography>
         )}
         <Box sx={{ mt: 2 }}>
-          <Link href="/login" variant="body2">
+          <Link href="#" variant="body2" onClick={() => navigate('/')}>
             Regresar a Login
           </Link>
         </Box>

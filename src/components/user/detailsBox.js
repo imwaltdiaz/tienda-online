@@ -71,9 +71,13 @@ function DetailsBox(){
             >
                 <Stack
                     direction="column" spacing={8}
+                    alignItems={'center'}
                 >
                     <Typography variant="h3" fontWeight="bold" sx={{pt : '50px'}}>S/88.99</Typography>
-                    <Button variant="contained" sx={{width : '20vw', height : '6vh', fontSize : '30px'}}>AÑADIR AL CARRITO</Button>
+                    <Button variant="contained" sx={{width : '200px', height : '150px', fontSize : '20px', bl:'50px'
+
+                      
+                    }}>AÑADIR AL CARRITO</Button>
                     <Typography variant="h4" fontWeight="bold">Cantidad:</Typography>
                     <Box
                         sx={{

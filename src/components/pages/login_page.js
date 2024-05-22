@@ -36,7 +36,7 @@ const LoginPage = () => {
       password: ''
     });
     setMensajeError('');
-    navigate('/pantalla-principal'); // Redirige a la página principal después de un login exitoso
+    navigate('/pantalla-principal'); 
   };
 
   return (

@@ -21,21 +21,18 @@ export default function DataTable2({columnas,datos,altura='61.5vh',ancho='77vw'}
   }
 
   return (
-    <Box
+    <DataGrid
       sx={{
         width: {ancho},
         height: {altura},
       }}
-    >
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        initialState={{
-          pagination: {
-            paginationModel: { page: 0, pageSize: 5 },
-          },
-        }}
-      />
-    </Box>
+      rows={rows}
+      columns={columns}
+      initialState={{
+        pagination: {
+          paginationModel: { page: 0, pageSize: 5 },
+        },
+      }}
+    />
   );
 }

@@ -9,16 +9,15 @@ import UsersMain from "./components/pages/main";
 function App() {
   return (
     <>
-      <UsersMain />
-
-      <BrowserRouter>
+      <div>
+      <BrowserRouter> 
         <Routes>
-          <Route path="/datos_usuario" element={<Datos_Usuario />} />
-          <Route path="/cambiar_contrasena" element={<Cambiar_Contrasena />} />
+          <Route index element={<UsersMain />} />
+          <Route path="/usuarioMain" element={<UsersMain />}/>
+          <Route path="adminMain" element={<AdminMain/>}/>
         </Routes>
       </BrowserRouter>
-
-      <AdminMain></AdminMain>
+    </div>
     </>
   );
 }

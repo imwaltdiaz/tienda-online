@@ -36,11 +36,11 @@ export default function Productos() {
   );
 
   const handleAddProduct = () => {
-    navigate('/agregarproducto');
+    navigate('/admin/agregarproducto');
   };
 
   const handleViewProduct = (product) => {
-    navigate('/agregarproducto', { state: { product } });
+    navigate('/admin/agregarproducto', { state: { product } });
   };
 
   return (

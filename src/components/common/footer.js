@@ -71,6 +71,11 @@ function Footer() {
             option2="Política de Envío"
             option3="FAQ"
           />
+          <ListFooter
+            title="Admin"
+            option1="Login"
+            ref1="/datosusuario"
+          />
           <Stack direction="row" spacing={2}>
             <IconButton>
               <Link href="">

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "nombre": "Manga Dragon Ball VIZ",
+    "descripcion": "Colección del manga de Dragon Ball VIZ publicado por Akira Toriyama",
+    "fechaCreacion": "11/02/2022",
+    "numProductos": 12,
+    "acciones": "Ver"
+  },
+  {
+    "id": 2,
+    "nombre": "Manga Dragon Ball VIZ",
+    "descripcion": "Colección del manga de Dragon Ball VIZ publicado por Akira Toriyama",
+    "fechaCreacion": "11/02/2022",
+    "numProductos": 12,
+    "acciones": "Ver"
+  },
+  {
+    "id": 3,
+    "nombre": "Manga Dragon Ball VIZ",
+    "descripcion": "Colección del manga de Dragon Ball VIZ publicado por Akira Toriyama",
+    "fechaCreacion": "11/02/2022",
+    "numProductos": 12,
+    "acciones": "Ver"
+  },
+  {
+    "id": 4,
+    "nombre": "Manga Dragon Ball VIZ",
+    "descripcion": "Colección del manga de Dragon Ball VIZ publicado por Akira Toriyama",
+    "fechaCreacion": "11/02/2022",
+    "numProductos": 12,
+    "acciones": "Ver"
+  },
+  {
+    "id": 5,
+    "nombre": "Manga Dragon Ball VIZ",
+    "descripcion": "Colección del manga de Dragon Ball VIZ publicado por Akira Toriyama",
+    "fechaCreacion": "11/02/2022",
+    "numProductos": 12,
+    "acciones": "Ver"
+  }
+]

@@ -1,32 +1,21 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { Button } from '@mui/material';
 
-function GenerarLista(lista) {
-  const navigate = useNavigate();
-  let [datos, setDatos] = useState([]);
-  
-  useEffect(() => {
-    const num = lista.length;
-    let datosGenerados = [];
-    for (let i = 0; i < num; i++) {
-      const Id = i + 1;
-      const nombre = lista[i].name;
-      const apellido = lista[i].lastName;
-      const correo = lista[i].email;
-      const fecha = lista[i].date;
-      const estado = "Activo";
-      const botones = (
-        <Button onClick={() => navigate(`/detalle_usuario/${Id}`, { state: { ordenes: lista[i].ordenes } })}>
-          Ver
-        </Button>
-      );
-      datosGenerados.push({ Id, nombre, apellido, correo, fecha, estado, botones });
-    }
-    setDatos(datosGenerados);
-  }, [lista, navigate]);
+function GenerarLista(lista, navigate) {
+  const datosGenerados = lista.map((item, index) => ({
+    id: index + 1,
+    nombre: item.name,
+    apellido: item.lastName,
+    correo: item.email,
+    fecha: item.date,
+    estado: "Activo",
+    botones: (
+      <Button onClick={() => navigate(`/detalle_usuario/${index + 1}`, { state: { ordenes: item.ordenes } })}>
+        Ver
+      </Button>
+    )
+  }));
 
-  return datos;
+  return datosGenerados;
 }
 
 export default GenerarLista;

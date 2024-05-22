@@ -1,42 +1,28 @@
 import * as React from 'react';
-import { DataGrid, GridColDef } from '@mui/x-data-grid';
+import { DataGrid } from '@mui/x-data-grid';
 import Box from '@mui/material/Box';
 
-export default function DataTable2({columnas,datos,altura='61.5vh',ancho='77vw'}) {
-  const nColumnas = columnas.length;
-  const columns = [];
-
-  for (let i = 0; i < nColumnas-1; i+=2) {
-    columns.push({ field: columnas[i],headerClassName: "Cabecera", headerName: columnas[i], width: columnas[i+1] });
-  }
-  
-  const nFilas = Math.floor(datos.length / (nColumnas/2));
-  const rows = [];
-  for (let i = 0; i < nFilas; i++) {
-    let row = {};
-    for (let j = 0; j < nColumnas/2; j++) {
-      row[columns[j].field] = datos[i*nColumnas/2+j];
-    }
-    rows.push(row);
-  }
+export default function DataTable2({ columnas, datos, altura = '61.5vh', ancho = '77vw' }) {
+  const columns = columnas.map((col, index) => ({
+    field: col.field,
+    headerName: col.headerName,
+    width: col.width,
+  }));
 
   return (
-    <DataGrid
-      sx={{
-        width: {ancho},
-        height: {altura},
-      }}
-      rows={rows}
-      columns={columns}
-        pageSize={5} 
-        rowsPerPageOptions={[5]} 
+    <Box sx={{ height: altura, width: ancho }}>
+      <DataGrid
+        rows={datos}
+        columns={columns}
+        pageSize={5}
+        rowsPerPageOptions={[5]}
         autoHeight
-
-      initialState={{
-        pagination: {
-          paginationModel: { page: 0, pageSize: 5 },
-        },
-      }}
-    />
+        initialState={{
+          pagination: {
+            paginationModel: { page: 0, pageSize: 5 },
+          },
+        }}
+      />
+    </Box>
   );
 }

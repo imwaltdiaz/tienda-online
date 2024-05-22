@@ -5,7 +5,7 @@
     "email": "crij@gmail.com",
     "date": "20/05/2024",
     "ordenes": [
-      {
+      { 
         "id": 11,
         "address": "Calle los abejorros Mz 45",
         "numCard": 1204545212,

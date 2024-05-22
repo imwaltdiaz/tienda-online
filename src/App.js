@@ -9,15 +9,8 @@ import UsersMain from "./components/pages/main";
 function App() {
   return (
     <>
-      <div>
-      <BrowserRouter> 
-        <Routes>
-          <Route index element={<UsersMain />} />
-          <Route path="/usuarioMain" element={<UsersMain />}/>
-          <Route path="adminMain" element={<AdminMain/>}/>
-        </Routes>
-      </BrowserRouter>
-    </div>
+      <UsersMain />
+      <AdminMain></AdminMain>
     </>
   );
 }

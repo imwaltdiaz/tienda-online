@@ -49,8 +49,9 @@ function Footer() {
           <ListFooter
             title="CUENTA"
             option1="Login"
+            ref1="/LoginPage"
             option2="Registro"
-            ref2="/datosusuario"
+            ref2="/crear-cuenta"
             option3="Carrito"
             ref3="/carritoDeCompras"
           />

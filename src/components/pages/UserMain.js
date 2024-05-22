@@ -9,6 +9,10 @@ import Details from "./detallesProducto";
 import Datos_Usuario from "./datos_Usuario";
 
 import Cambiar_Contrasena from './cambiar_Contrasena';
+import LoginPage from './login_page';
+import NuevaCuenta from './nueva_cuenta';
+import ForgotPasswordPage from './perdida_contra';
+import MainPage from './pantalla_principal';
 
 function UserMain() {
   return (
@@ -23,6 +27,10 @@ function UserMain() {
           <Route path="/pedidoCompleto" element={<PedidoCompleto />} />
           <Route path="/datosusuario" element={<Datos_Usuario/>} />
           <Route path="/cambiarcontrasena" element={<Cambiar_Contrasena />} />
+          <Route path="/LoginPage" element={<LoginPage />} />
+          <Route path="/perdida-contra" element={<ForgotPasswordPage />} />
+          <Route path="/crear-cuenta" element={<NuevaCuenta />} />
+          <Route path="/pantalla-principal" element={<MainPage />} />
         </Routes>
       
     </div>

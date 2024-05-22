@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Stack, TextField, Box, IconButton, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, 
-  Paper, TableFooter, TablePagination, Button, Typography } from '@mui/material';
+import { Stack, TextField, Box, IconButton, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TableFooter, TablePagination, Button, Typography } from '@mui/material';
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import seriesData from './seriesData.json'; // Importa los datos desde el JSON
@@ -67,7 +66,7 @@ export function Series() {
   };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', height: '76vh' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', height: '76vh', mb: 4, marginBottom: "40px" }}>
       <Stack direction="column" justifyContent="flex-start" paddingLeft="1vw" sx={{ flexGrow: 1 }}>
         <Typography variant="h6" component="div" sx={{ paddingTop: "15px", paddingBottom: "15px" }}>
           Series

@@ -1,12 +1,9 @@
 import * as React from 'react';
 import TitleBar from '../common/titleBar';
 import DrawerDev from '../admin/DrawerDev';
-import { Container, Stack, TextField, Typography } from '@mui/material';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+import { Stack, TextField, Button } from '@mui/material';
 
-
-export default function Cambiar_Contrasena() {
+export default function CambiarContrasena() {
   return (
     <>
       <Stack
@@ -34,7 +31,6 @@ export default function Cambiar_Contrasena() {
             <TextField id='nuevo' placeholder='Nuevo' variant='outlined'></TextField>
             <TextField id='repetir' placeholder='Repetir' variant='outlined'></TextField>
             <Button variant="contained">Guardar</Button>
-            
           </Stack>
         </Stack>
       </Stack>

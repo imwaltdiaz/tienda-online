@@ -10,14 +10,6 @@ function App() {
   return (
     <>
       <UsersMain />
-
-      <BrowserRouter>
-        <Routes>
-          <Route path="/datos_usuario" element={<Datos_Usuario />} />
-          <Route path="/cambiar_contrasena" element={<Cambiar_Contrasena />} /> */
-        </Routes>
-      </BrowserRouter>
-
       <AdminMain></AdminMain>
     </>
   );

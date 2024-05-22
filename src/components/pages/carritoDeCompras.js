@@ -21,6 +21,8 @@ export default function ItemsCarro() {
       <Box component="section" sx={{ p: 2, border: '1px solid black', background: '#C2C1C1' }}>
         Items Disponible para Envio
       </Box>
+      <Compil/>
+      <BtnPago/>
     </>
   );
 }

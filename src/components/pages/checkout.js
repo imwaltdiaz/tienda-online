@@ -17,17 +17,27 @@ import { styled } from '@mui/material/styles';
 export default function ItemsCheckOut() {
   return (
     <>
-    <Header/>
+      <Header/>
       <Typography variant="h5" component="p">   
         ¡Casi listo! Tu orden no estará completa hasta que revises y presiones el botón "Completar la orden" al final de la página
       </Typography>
       <Box component="section" sx={{ p: 1, border: '1px solid black', background :'#C2C1C1'}}>
         Datos de compra
       </Box>
-      
+      <Box display={'flex'} justifyContent={'space-evenly'}>
+        <BoxDireccion/>
+        <BoxPago/>
+      </Box>
+      <MetodoEnvio/>
+      <Box display={'flex'} justifyContent={'space-evenly'}>
+        <BoxItem/>
+        <BoxResOrd/>
+      </Box>
+      <Footer/>
     </>
   );
 }
+
 
 export function BoxDireccion() {
   return (
@@ -175,7 +185,6 @@ export function BoxResOrd({ subtotal, envio, impuestos, total }) {
         </Button>
       </Box>
     </Box>
-    <Footer/>
     </>
   );
 }

@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
-import { Detalle_Orden } from "../pages/Detalle_Orden";
-import { Detalle_Usuario } from "../pages/Detalle_Usuarios";
+import { useNavigate } from "react-router-dom";
+import { Button } from '@mui/material';
+
 function GenerarLista(lista) {
+  const navigate = useNavigate();
   let [datos, setDatos] = useState([]);
+  
   useEffect(() => {
     const num = lista.length;
     let datosGenerados = [];
@@ -13,12 +16,17 @@ function GenerarLista(lista) {
       const correo = lista[i].email;
       const fecha = lista[i].date;
       const estado = "Activo";
-      const botones = <boton  onClick={Detalle_Usuario(lista[i].ordenes)}>Ver</boton>;
-      datosGenerados.push({ Id, nombre, apellido, correo, fecha, estado, botones});
+      const botones = (
+        <Button onClick={() => navigate(`/detalle_usuario/${Id}`, { state: { ordenes: lista[i].ordenes } })}>
+          Ver
+        </Button>
+      );
+      datosGenerados.push({ Id, nombre, apellido, correo, fecha, estado, botones });
     }
     setDatos(datosGenerados);
-  }, [lista]); 
+  }, [lista, navigate]);
+
   return datos;
 }
-export default GenerarLista;
 
+export default GenerarLista;

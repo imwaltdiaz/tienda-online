@@ -65,7 +65,7 @@ export default function AgregarProducto() {
     }
 
     // Redirigir a la tabla de productos
-    navigate('/productos');
+    navigate('/admin/productos');
   };
 
   return (

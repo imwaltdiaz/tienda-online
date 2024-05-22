@@ -17,9 +17,9 @@ function Header2() {
           <Button href="/" variant="h1" sx={{fontWeight : 'bold', fontSize : '30px'}}>
             TIENDA
           </Button>
-          <Button color="inherit" href="#" sx={{mx : '20px'}}>Mas vendidos</Button>
+          <Button color="inherit" href="/busqueda" sx={{mx : '20px'}}>Mas vendidos</Button>
           <Button color="inherit" href="#Nuevos" sx={{mx : '20px'}}>Nuevos</Button>
-          <Button color="inherit" href="#" sx={{mx : '20px'}}>Ofertas</Button>
+          <Button color="inherit" href="/busqueda" sx={{mx : '20px'}}>Ofertas</Button>
           <Box sx={{flexGrow : 1}}/>
           <IconButton color="withe" href="/carritoDeCompras">
             <LocalGroceryStoreIcon/>

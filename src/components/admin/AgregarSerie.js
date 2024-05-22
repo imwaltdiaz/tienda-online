@@ -1,74 +1,70 @@
-import * as React from 'react';
-import Header from '../common/header';
-import Footer from '../common/footer';
-import { Button, Container, Stack, TextField, Typography } from '@mui/material';
-import Box from '@mui/material/Box';
-import TitleBar from '../common/titleBar';
-import DataTable2 from '../common/dataTable2';
-import Grid from '@mui/material/Grid';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { Box, Button, TextField, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, IconButton } from '@mui/material';
 
 export function AgregarSerie() {
-  const columnas = ["id",15,"Descripcion",30,"Acciones",0];
-  const datos = [1, "Manga Dragon Ball Vol 1", "Remover", 2, "Manga Dragon Ball Vol 2", "Remover", 3, "Manga Dragon Ball Vol 3", "Remover", 4, "Manga Dragon Ball Vol 4", "Remover", 5, "Manga Dragon Ball Vol 5", "Remover", 6, "Manga Dragon Ball Vol 6", "Remover", 7, "Manga Dragon Ball Vol 7", "Remover", 8, "Manga Dragon Ball Vol 8", "Remover", 9, "Manga Dragon Ball Vol 9", "Remover", 10, "Manga Dragon Ball Vol 10", "Remover"]
+  const location = useLocation();
+  const { serie } = location.state;
+  const [nombre, setNombre] = useState(serie.nombre);
+  const [descripcion, setDescripcion] = useState(serie.descripcion);
+  const [productos, setProductos] = useState(serie.productos || []);
+  
+  const handleAddProduct = (product) => {
+    setProductos([...productos, product]);
+  };
+
+  const handleRemoveProduct = (product) => {
+    setProductos(productos.filter(p => p.id !== product.id));
+  };
+
   return (
-    <>
-      <Stack
-        direction="column"
-        justifyContent="flex-start"
-        paddingLeft="1vw"
-        paddingTop="20px"
-      >
-        <TitleBar title={'Agregar serie'}/>
-        <Stack
-          direction="row"
-          justifyContent="space-between"
-          paddingTop="10px"
-        >
-          <Stack
-            direction="column"
-            justifyContent="flex-start"
-            spacing={5}
-          >
-            <Grid 
-              sx={{
-                width: '25vw',
-                height: '50vh',
-                border: '1px solid black',
-              }}
-            ></Grid>
-            <Button variant="contained">Guardar</Button>
-          </Stack>
-          <Stack
-            direction="column"
-            justifyContent="flex-start"
-            spacing={5}
-            
-          >
-            <Stack>
-              <Typography>Nombre</Typography>
-              <TextField id='nombre' label='Nombre' variant='outlined'
-                sx={{
-                  height: '45px',
-                  width: '40vw',
-                }}
-              ></TextField>
-            </Stack>
-            <Stack>
-              <Typography>Descripcion</Typography>
-              <TextField id='nombre' label='Nombre' variant='outlined'
-                sx={{
-                  height: '45px',
-                  width: '40vw',
-                }}
-              ></TextField>
-            </Stack>
-            <Stack>
-              <TitleBar title={'Productos de la serie'} width={'40vw'}/>
-              <DataTable2 columnas={columnas} datos={datos} altura={'24vh'} ancho={'40vw'}/>
-            </Stack>
-          </Stack>
-        </Stack>
-      </Stack>
-    </>
+    <Box sx={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+      <Typography variant="h6">Agregar Serie</Typography>
+      <Box>
+        <TextField
+          label="Nombre"
+          value={nombre}
+          onChange={(e) => setNombre(e.target.value)}
+          fullWidth
+          sx={{ marginBottom: '10px' }}
+        />
+        <TextField
+          label="Descripción"
+          value={descripcion}
+          onChange={(e) => setDescripcion(e.target.value)}
+          fullWidth
+          sx={{ marginBottom: '10px' }}
+        />
+      </Box>
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+        <Typography variant="h6">Productos en la serie</Typography>
+        <TableContainer component={Paper}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>ID</TableCell>
+                <TableCell>Descripción</TableCell>
+                <TableCell>Acción</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {productos.map((producto) => (
+                <TableRow key={producto.id}>
+                  <TableCell>{producto.id}</TableCell>
+                  <TableCell>{producto.descripcion}</TableCell>
+                  <TableCell>
+                    <Button color="secondary" onClick={() => handleRemoveProduct(producto)}>Remover</Button>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+        <Button variant="contained" color="primary" onClick={() => handleAddProduct({ id: productos.length + 1, descripcion: 'Nuevo Producto' })}>
+          +
+        </Button>
+      </Box>
+      <Button variant="contained" color="primary">Guardar</Button>
+    </Box>
   );
 }

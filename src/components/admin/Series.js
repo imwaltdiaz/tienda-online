@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Stack, TextField, Typography, Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TableFooter, TablePagination, IconButton } from '@mui/material';
+import { Stack, TextField, Box, IconButton, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, 
+  Paper, TableFooter, TablePagination, Button, Typography } from '@mui/material';
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 import seriesData from './seriesData.json'; // Importa los datos desde el JSON
 
 function TablePaginationActions(props) {
@@ -39,6 +41,7 @@ export function Series() {
   const [filteredData, setFilteredData] = useState(seriesData);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setFilteredData(
@@ -59,8 +62,12 @@ export function Series() {
     setPage(0);
   };
 
+  const handleViewClick = (serie) => {
+    navigate(`/agregarserie/${serie.id}`, { state: { serie } });
+  };
+
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', height: '77vh' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', height: '76vh' }}>
       <Stack direction="column" justifyContent="flex-start" paddingLeft="1vw" sx={{ flexGrow: 1 }}>
         <Typography variant="h6" component="div" sx={{ paddingTop: "15px", paddingBottom: "15px" }}>
           Series
@@ -98,7 +105,7 @@ export function Series() {
                   <TableCell>{serie.fechaCreacion}</TableCell>
                   <TableCell>{serie.numProductos}</TableCell>
                   <TableCell>
-                    <IconButton color="primary">Ver</IconButton>
+                    <Button color="primary" onClick={() => handleViewClick(serie)}>Ver</Button>
                   </TableCell>
                 </TableRow>
               ))}

@@ -34,7 +34,7 @@ export default function AdminMain() {
             <Route path="/series" element={<Series />} />
             <Route path="/agregar" element={<Agregar />} />
             <Route path="/agregarproducto" element={<AgregarProducto />} />
-            <Route path="/agregarserie" element={<AgregarSerie />} />
+            <Route path="/agregarserie/:id" element={<AgregarSerie />} />
           </Routes>
         </BrowserRouter>
       </Stack>

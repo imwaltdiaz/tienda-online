@@ -43,8 +43,6 @@ export default function Productos() {
     navigate('/agregarproducto', { state: { product } });
   };
 
-  const emptyRows = Math.max(0, rowsPerPage - filteredData.length);
-
   return (
     <Paper style={{ minHeight: '400px', 
       minWidth: '70vw'
@@ -93,11 +91,6 @@ export default function Productos() {
                 </TableCell>
               </TableRow>
             ))}
-            {emptyRows > 0 && (
-              <TableRow style={{ height: 53 * emptyRows }}>
-                <TableCell colSpan={8} />
-              </TableRow>
-            )}
           </TableBody>
         </Table>
       </TableContainer>

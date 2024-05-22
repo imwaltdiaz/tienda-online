@@ -50,15 +50,19 @@ function Footer() {
             title="CUENTA"
             option1="Login"
             option2="Registro"
+            ref2="/datosusuario"
             option3="Carrito"
+            ref3="/carritoDeCompras"
           />
 
           <ListFooter
             title="Productos"
             option1="Más vendidos"
+            ref1="/busqueda"
             option2="Nuevos"
             ref2="#Nuevos"
             option3="Ofertas"
+            ref3="/busqueda"
           />
           <ListFooter
             title="Ayuda"

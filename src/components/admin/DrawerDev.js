@@ -50,7 +50,7 @@ function DrawerDev() {
             <Link variant="body2" color="textSecondary" href="/admin/lista-ordenes">
               Órdenes
             </Link>
-            <Link variant="body2" color="textSecondary" href="#">
+            <Link variant="body2" color="textSecondary" href="/admin/productos">
               Productos mas vendidos
             </Link>
             <Link variant="body2" color="textSecondary" href="/admin/series">

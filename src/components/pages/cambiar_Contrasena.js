@@ -11,7 +11,6 @@ export default function CambiarContrasena() {
         justifyContent="flex-start"
         paddingLeft="1vw"
       >
-        <DrawerDev/>
         <Stack
           direction="column"
           justifyContent="flex-start"

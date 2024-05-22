@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Container, Typography, Box, Link, Table, TableBody, TableCell, TableContainer, TableRow, Paper, Pagination } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import Header from '../common/header';
 import Footer from '../common/footer';
 
 const MainPage = () => {
   const [selectedSection, setSelectedSection] = useState('inicio');
   const [page, setPage] = useState(1);
-  
+  const navigate = useNavigate();
+
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
@@ -28,11 +30,11 @@ const MainPage = () => {
           { order: 'Orden x10 Items(Mass Effect, Dragon Age, Anthem..)', date: 'orden Nro. 12345238', status: 'Ver Detalle', detail: 'Fecha: 12 de febrero de 2022 - Total: S/122.00', enviado: 'Enviado a: Jiron Huascar 123, Jesus Maria, Lima, Peru' },
           { order: 'Orden x11 Items(GTA V, RDR2, Max Payne..)', date: 'orden Nro. 12345239', status: 'Ver Detalle', detail: 'Fecha: 12 de febrero de 2022 - Total: S/122.00', enviado: 'Enviado a: Jiron Huascar 123, Jesus Maria, Lima, Peru' },
         ];
-        
+
         const startIndex = (page - 1) * ordersPerPage;
         const endIndex = startIndex + ordersPerPage;
         const displayedOrders = orders.slice(startIndex, endIndex);
-        
+
         return (
           <Box>
             <Typography variant="h4" gutterBottom>
@@ -49,7 +51,11 @@ const MainPage = () => {
                         <Typography variant="body2" color="textSecondary">{row.enviado}</Typography>
                       </TableCell>
                       <TableCell sx={{ border: 'none' }}>{row.date}</TableCell>
-                      <TableCell sx={{ border: 'none' }}>{row.status}</TableCell>
+                      <TableCell sx={{ border: 'none' }}>
+                        <Link component="button" onClick={() => alert('Ver detalle de la orden')}>
+                          {row.status}
+                        </Link>
+                      </TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -68,27 +74,11 @@ const MainPage = () => {
           </Box>
         );
       case 'datos-registro':
-        return (
-          <Box>
-            <Typography variant="h4" gutterBottom>
-              Datos de registro
-            </Typography>
-            <Typography variant="body1">
-              Aquí puedes ver y actualizar tus datos de registro.
-            </Typography>
-          </Box>
-        );
+        navigate('/datosusuario'); // Navega a Datos de registro
+        break;
       case 'cambiar-password':
-        return (
-          <Box>
-            <Typography variant="h4" gutterBottom>
-              Cambiar contraseña
-            </Typography>
-            <Typography variant="body1">
-              Aquí puedes cambiar tu contraseña.
-            </Typography>
-          </Box>
-        );
+        navigate('/cambiarcontrasena'); // Navega a Cambiar contraseña
+        break;
       default:
         return (
           <Box>

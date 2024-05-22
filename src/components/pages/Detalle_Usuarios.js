@@ -18,7 +18,7 @@ export function Detalle_Usuario(User){
             <TitleBar title={"Detalle de usuario registrado"}/>
             <TitleBar title={"  "+User.id+"    "+User.name+"     "+User.email+"    "+User.date}/>
             <TitleBar title={"Ordenes recientes, maximo 10"}/>
-            <DataTable2 columnas={columnas} datos={}/>
+            <DataTable2 columnas={columnas} datos={User.producto}/>
             </Stack>
         </>
     );

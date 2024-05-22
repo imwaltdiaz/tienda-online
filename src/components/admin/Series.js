@@ -62,7 +62,7 @@ export default function Series() {
   };
 
   const handleViewClick = (serie) => {
-    navigate(`/agregarserie/${serie.id}`, { state: { serie } });
+    navigate(`/admin/agregarserie/${serie.id}`, { state: { serie } });
   };
 
   return (

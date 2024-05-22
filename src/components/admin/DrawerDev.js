@@ -1,4 +1,3 @@
-//Crea componente DrawerDev
 import { Stack } from "@mui/material";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
@@ -8,17 +7,11 @@ import Link from "@mui/material/Link";
 function DrawerDev() {
   return (
     <Container
-      //añade un padding en top
-      //añade max width de 250px
-
       sx={{
         paddingTop: "20px",
         width: "340px",
         margin: 0
-
-
-      }
-      }
+      }}
     >
       <Box
         sx={{
@@ -36,23 +29,22 @@ function DrawerDev() {
             paddingLeft: "20px",
           }}
         >
-          <Link variant="body1"  align="left" href="#">
+          <Link variant="body1" align="left" href="#">
             Admin
           </Link>
           <Stack
-            // añade padding left
             spacing={2}
             sx={{
               paddingLeft: "20px",
             }}
           >
-            <Link variant="body2" color="textSecondary" href="/dashboard">
+            <Link variant="body2" color="textSecondary" href="/admin/dashboard">
               Dashboard
             </Link>
-            <Link variant="body2" color="textSecondary" href="/lista-usuarios">
+            <Link variant="body2" color="textSecondary" href="/admin/lista-usuarios">
               Usuarios registrados
             </Link>
-            <Link variant="body2" color="textSecondary" href="/productos">
+            <Link variant="body2" color="textSecondary" href="/admin/productos">
               Productos
             </Link>
             <Link variant="body2" color="textSecondary" href="#">
@@ -61,7 +53,7 @@ function DrawerDev() {
             <Link variant="body2" color="textSecondary" href="#">
               Productos mas vendidos
             </Link>
-            <Link variant="body2" color="textSecondary" href="/series">
+            <Link variant="body2" color="textSecondary" href="/admin/series">
               Series
             </Link>
           </Stack>

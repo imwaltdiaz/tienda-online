@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "detalle": "Manga Dragon Ball Vol 1",
+    "serie": "Dragon Ball",
+    "precio": "S/ 30.99",
+    "fechaRegistro": "11/02/2022",
+    "stock": 12,
+    "estado": "Activo"
+  },
+  {
+    "id": 10,
+    "detalle": "Manga Sailor Moon Vol 9",
+    "serie": "Sailor Moon",
+    "precio": "S/ 30.99",
+    "fechaRegistro": "11/02/2022",
+    "stock": 10,
+    "estado": "Activo"
+  },
+  {
+    "id": 11,
+    "detalle": "Lost BluRay Complete",
+    "serie": "Lost",
+    "precio": "S/ 30.99",
+    "fechaRegistro": "11/02/2022",
+    "stock": 100,
+    "estado": "Activo"
+  },
+  {
+    "id": 14,
+    "detalle": "Manga Dragon Ball Vol 2",
+    "serie": "Dragon Ball",
+    "precio": "S/ 30.99",
+    "fechaRegistro": "11/02/2022",
+    "stock": 12,
+    "estado": "Activo"
+  }
+]

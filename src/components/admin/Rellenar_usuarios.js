@@ -17,5 +17,4 @@ function GenerarLista(lista, navigate) {
 
   return datosGenerados;
 }
-
 export default GenerarLista;

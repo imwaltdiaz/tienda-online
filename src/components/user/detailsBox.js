@@ -32,7 +32,10 @@ function DetailsBox(){
                     pt: 2,
                     border: '2px solid gray',
                     ml: 8,
-                    borderRadius: 2
+                    borderRadius: 2,
+                    backgroundImage: 'url(https://images.ctfassets.net/s5n2t79q9icq/6QPwg3EEdBnhHeIGwonKTf/364e43fdd14542e3c2d4f485317823ef/uxyci7dshzjknw_Collector_EN.png)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
                 }}
             >
             </Box>

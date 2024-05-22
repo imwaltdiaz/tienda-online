@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Button,
   TextField,
   Typography,
-  Grid,
-  Card,
-  CardContent,
-  CardActions,
   Stack,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
+import { useNavigate, useLocation } from "react-router-dom";
+import { v4 as uuidv4 } from 'uuid'; // Para generar IDs únicos
+
+function generateShortId() {
+  return Math.floor(Math.random() * 90000) + 10000; // Generar un número entre 10000 y 99999
+}
 
 export default function AgregarProducto() {
   const Item = styled(Paper)(({ theme }) => ({
@@ -21,6 +23,50 @@ export default function AgregarProducto() {
     textAlign: "center",
     color: theme.palette.text.secondary,
   }));
+
+  const [product, setProduct] = useState({
+    id: generateShortId(), // Generar un ID único para cada producto
+    detalle: '',
+    descripcion: '',
+    caracteristicas: '',
+    marca: '',
+    serie: '',
+    precio: '',
+    fechaRegistro: new Date().toLocaleDateString(),
+    stock: 0,
+    estado: 'Activo'
+  });
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state && location.state.product) {
+      setProduct(location.state.product);
+    }
+  }, [location.state]);
+
+  const handleChange = (e) => {
+    setProduct({
+      ...product,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSave = () => {
+    const existingProducts = JSON.parse(localStorage.getItem('productos')) || [];
+    if (existingProducts.find(p => p.id === product.id)) {
+      // Editar producto existente
+      const updatedProducts = existingProducts.map(p => p.id === product.id ? product : p);
+      localStorage.setItem('productos', JSON.stringify(updatedProducts));
+    } else {
+      // Añadir nuevo producto
+      localStorage.setItem('productos', JSON.stringify([...existingProducts, product]));
+    }
+
+    // Redirigir a la tabla de productos
+    navigate('/productos');
+  };
 
   return (
     <>
@@ -36,7 +82,7 @@ export default function AgregarProducto() {
             mb: "20px",
           }}
         >
-          Agregar Producto
+          {location.state && location.state.product ? 'Editar Producto' : 'Agregar Producto'}
         </Typography>
         <form>
           <Stack direction="row" justifyContent="space-between">
@@ -52,7 +98,7 @@ export default function AgregarProducto() {
                   height: 200,
                   border: "1px solid #ddd",
                   display: "flex",
-                  justifyContent: "center",
+                  justifyContent:"center",
                   alignItems: "center",
                   mb: 2,
                 }}
@@ -72,39 +118,40 @@ export default function AgregarProducto() {
             <Stack direction="column " alignItems="left" width="100%" ml="40px">
               <label>Nombre</label>
               <TextField
+                name="detalle"
                 label="Nombre"
                 fullWidth
                 margin="normal"
                 size="small"
-                sx={{
-                  marginTop: "10px",
-                }}
+                sx={{ marginTop: "10px" }}
+                onChange={handleChange}
+                value={product.detalle}
               />
               <label>Descripción</label>
               <TextField
-                label="Descripcion"
+                name="descripcion"
+                label="Descripción"
                 fullWidth
-                //hazle tamaño altura mas grande
                 multiline
                 rows={2}
                 margin="normal"
                 size="big"
-                sx={{
-                  marginTop: "10px",
-                }}
+                sx={{ marginTop: "10px" }}
+                onChange={handleChange}
+                value={product.descripcion}
               />
               <label>Características</label>
               <TextField
-                label="Descripcion"
+                name="caracteristicas"
+                label="Características"
                 fullWidth
-                //hazle tamaño altura mas grande
                 multiline
                 rows={4}
                 margin="normal"
                 size="big"
-                sx={{
-                  marginTop: "10px",
-                }}
+                sx={{ marginTop: "10px" }}
+                onChange={handleChange}
+                value={product.caracteristicas}
               />
               <Stack
                 direction="row"
@@ -115,119 +162,94 @@ export default function AgregarProducto() {
                 <Stack direction="column">
                   <label>Marca</label>
                   <TextField
+                    name="marca"
                     label="Marca"
                     fullWidth
-                    //hazle tamaño altura mas grande
                     multiline
                     rows={1}
                     margin="normal"
                     size="small"
-                    sx={{
-                      marginTop: "10px",
-                    }}
+                    sx={{ marginTop: "10px" }}
+                    onChange={handleChange}
+                    value={product.marca}
                   />
                 </Stack>
 
                 <Stack direction="column">
                   <label>Serie</label>
                   <TextField
+                    name="serie"
                     label="Serie"
                     fullWidth
-                    //hazle tamaño altura mas grande
                     multiline
                     rows={1}
                     margin="normal"
                     size="small"
-                    sx={{
-                      marginTop: "10px",
-                    }}
+                    sx={{ marginTop: "10px" }}
+                    onChange={handleChange}
+                    value={product.serie}
                   />
                 </Stack>
                 <Stack direction="column">
                   <label>Precio</label>
                   <TextField
+                    name="precio"
                     label="S/"
                     fullWidth
-                    //hazle tamaño altura mas grande
                     multiline
                     rows={1}
                     margin="normal"
                     size="small"
-                    sx={{
-                      marginTop: "10px",
-                    }}
+                    sx={{ marginTop: "10px" }}
+                    onChange={handleChange}
+                    value={product.precio}
                   />
                 </Stack>
               </Stack>
-              {/* aqui */}
               <Stack
                 direction="row"
                 justifyContent="flex-start"
                 alignItems="center"
                 width="100%"
-                gap = '20px'
+                gap="20px"
               >
                 <Stack direction="column">
-                  <label>Precio</label>
+                  <label>Stock</label>
                   <TextField
-                    label="S/"
+                    name="stock"
+                    label="Stock"
                     fullWidth
-                    //hazle tamaño altura mas grande
                     multiline
                     rows={1}
                     margin="normal"
                     size="small"
-                    sx={{
-                      marginTop: "10px",
-                    }}
+                    sx={{ marginTop: "10px" }}
+                    onChange={handleChange}
+                    value={product.stock}
                   />
                 </Stack>
-                <Stack direction="column">
-                  <label>Precio</label>
-                  <TextField
-                    label="S/"
-                    fullWidth
-                    //hazle tamaño altura mas grande
-                    multiline
-                    rows={1}
-                    margin="normal"
-                    size="small"
-                    sx={{
-                      marginTop: "10px",
-                    }}
-                  />
-                </Stack>
-
               </Stack>
               <Stack
                 direction="row"
                 justifyContent="flex-end"
                 alignItems="center"
                 width="100%"
-                gap = '20px'
-                //añade bordertop a 20px
+                gap="20px"
                 sx={{
                   borderTop: "1px",
                   marginTop: "20px",
                   paddingTop: "20px",
                 }}
-                
               >
                 <Button
-                variant="contained"
-                component="label"
-                fullWidth
-                sx={{
-                  width: "250px",
-                }}
-              >
-                Guardar
-                <input type="file" hidden />
-              </Button>
+                  variant="contained"
+                  onClick={handleSave}
+                  sx={{ width: "250px" }}
+                >
+                  Guardar
+                </Button>
               </Stack>
-              
             </Stack>
-            
           </Stack>
         </form>
       </Box>

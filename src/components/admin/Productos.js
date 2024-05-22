@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
-  Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TablePagination, Paper, TextField, Button
+  Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TablePagination, Paper, TextField, Button, Stack
 } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
-export default function Productos({ data }) {
+export default function Productos() {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [searchTerm, setSearchTerm] = useState('');
+  const [data, setData] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const storedData = JSON.parse(localStorage.getItem('productos')) || [];
+    setData(storedData);
+  }, []);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -27,8 +35,27 @@ export default function Productos({ data }) {
     product.serie.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const handleAddProduct = () => {
+    navigate('/agregarproducto');
+  };
+
+  const handleViewProduct = (product) => {
+    navigate('/agregarproducto', { state: { product } });
+  };
+
+  const emptyRows = Math.max(0, rowsPerPage - filteredData.length);
+
   return (
-    <Paper>
+    <Paper style={{ minHeight: '400px', 
+      minWidth: '70vw'
+
+    }}>
+      <Stack direction="row" justifyContent="space-between" alignItems="center" padding={2}>
+        <h2>Productos</h2>
+        <Button variant="contained" color="primary" onClick={handleAddProduct}>
+          + Agregar Producto
+        </Button>
+      </Stack>
       <TextField
         label="Buscar por ID, serie o detalle"
         variant="outlined"
@@ -61,11 +88,16 @@ export default function Productos({ data }) {
                 <TableCell>{product.stock}</TableCell>
                 <TableCell>{product.estado}</TableCell>
                 <TableCell>
-                  <Button color="primary">Ver</Button>
+                  <Button color="primary" onClick={() => handleViewProduct(product)}>Ver</Button>
                   <Button color="secondary">Desactivar</Button>
                 </TableCell>
               </TableRow>
             ))}
+            {emptyRows > 0 && (
+              <TableRow style={{ height: 53 * emptyRows }}>
+                <TableCell colSpan={8} />
+              </TableRow>
+            )}
           </TableBody>
         </Table>
       </TableContainer>
